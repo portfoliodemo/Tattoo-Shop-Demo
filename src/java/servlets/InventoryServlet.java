@@ -5,12 +5,15 @@
  */
 package servlets;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -23,13 +26,53 @@ public class InventoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        String user = (String) session.getAttribute("user_name");
+         int totalUserValue = 0;
+        String fileUser = "";
+        String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
+        File file = new File(path);
+        Scanner inFile = new Scanner(file).useDelimiter(",");
+        while (inFile.hasNext()){
+            fileUser = inFile.next();
+            inFile.next();
+            inFile.next();
+               
+                
+                String cost = inFile.next();
+                 if (fileUser.equals(user)){
+            totalUserValue += Integer.parseInt(cost);
+            }
+                 inFile.nextLine();
+        }
+         request.setAttribute("inventoryValue", totalUserValue);
+          inFile.close();
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        String category = request.getParameter("category");
+        String itemName = request.getParameter("itemName");
+        String price = request.getParameter("price");
+        String user = (String) session.getAttribute("user_name");
+        
+        if ("".equals(category) || "".equals(itemName) || "".equals(price) )
+        {
+            request.setAttribute("errorMessage", "Invalid. Please re-enter");
+               request.getRequestDispatcher("/WEB-INF/inventory.jsp")
+                        .forward(request, response);
+            //getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
+        }
+        if (Integer.parseInt(price) < 0){
+             request.setAttribute("errorMessage", "Invalid. Please re-enter");
+               request.getRequestDispatcher("/WEB-INF/inventory.jsp")
+                        .forward(request, response);
+        }
+       
+        getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
     }
 
    
