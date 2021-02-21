@@ -5,7 +5,10 @@
  */
 package servlets;
 
+import Models.HomeItem;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -43,9 +46,11 @@ public class InventoryServlet extends HttpServlet {
                  if (fileUser.equals(user)){
             totalUserValue += Integer.parseInt(cost);
             }
-                 inFile.nextLine();
+                 if (inFile.hasNext()){
+                         inFile.nextLine();
+                 }
         }
-         request.setAttribute("inventoryValue", totalUserValue);
+         session.setAttribute("inventoryValue", totalUserValue);
           inFile.close();
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
     }
@@ -58,6 +63,9 @@ public class InventoryServlet extends HttpServlet {
         String itemName = request.getParameter("itemName");
         String price = request.getParameter("price");
         String user = (String) session.getAttribute("user_name");
+        String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
+        
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true))); 
         
         if ("".equals(category) || "".equals(itemName) || "".equals(price) )
         {
@@ -71,6 +79,12 @@ public class InventoryServlet extends HttpServlet {
                request.getRequestDispatcher("/WEB-INF/inventory.jsp")
                         .forward(request, response);
         }
+        
+        HomeItem newItem = new HomeItem(user, category, itemName, price);
+       pw.println(newItem.formatToFile());
+       pw.close();
+       request.setAttribute("errorMessage", "Item Was Successfully Added to your Inventory");
+        
        
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
     }
