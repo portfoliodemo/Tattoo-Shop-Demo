@@ -38,7 +38,7 @@
 
         </form>
         <p>
-            ${errorMessageLogin}
+            ${errorMessage}
         </p>
         <br>
         Total value in inventory: ${inventoryValue}

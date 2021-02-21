@@ -37,12 +37,12 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
+
         //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         String path = getServletContext().getRealPath("/WEB-INF/users.txt");
 // to read files
         BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         String[] usernames = null;
-        String[] passwords = null;
         String line = "";
         String splitBy = ",";
         while ((line = br.readLine()) != null) {
@@ -53,25 +53,24 @@ public class LoginServlet extends HttpServlet {
                         if (t.equals(password)) {
                             response.sendRedirect("inventory");
                             session.setAttribute("user_name", userName);
-                        }
-                        else if (t.equals(password) != true) {
-                    request.setAttribute("errorMessage", "Invalid Login");
-                    //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-                            }
-                       
-                    }
-                   
-                    // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-                }
-                else if (x.equals(userName) != true) {
+
+                        } else {
                             request.setAttribute("errorMessage", "Invalid Login");
-                           // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-     
+                           
                         }
+
+                    }
+
+                    // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+                } else {
+                    request.setAttribute("errorMessage", "Invalid Login");
+                   
+                }
 
             }
 
         }
+        // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
 
     }
 

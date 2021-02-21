@@ -3,18 +3,26 @@ package Models;
 
 
 public class HomeItem {
+    private String user;
     private String category;
     private String itemName;
-    private int price;
+    private String price;
     
     public HomeItem(){
         
     }
-    public HomeItem(String category, String itemName,int price){
+    public HomeItem(String user,String category, String itemName,String price){
+        this.user = user;
         this.category = category;
         this.itemName= itemName;
         this.price = price;
                 
+    }
+    public String getUser(){
+        return user;
+    }
+    public void setUser(String user){
+        this.user = user;
     }
     public String getCategory(){
         return category;
@@ -28,16 +36,16 @@ public class HomeItem {
     public void setItemName(String itemName){
         this.itemName = itemName;
     }
-    public int getPrice(){
+    public String getPrice(){
         return price;
     }
-    public void setPrice(int price){
+    public void setPrice(String price){
         this.price = price;
     }
     public String toString() {
-		return String.format("%d\t%s\t%s", category,itemName,price);
+		return String.format("%s\t%s\t%s\t%s", user,category,itemName,price);
 	}
 	public String formatToFile() {
-		return String.format("%d , %s , %s", category,itemName,price);
+		return String.format("%s , %s , %s , %s", user,category,itemName,price);
 	}
 }
