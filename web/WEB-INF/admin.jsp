@@ -12,5 +12,8 @@
         <p>
             total value for all users: ${totalValue}
         </p>
+       <!-- <form action="login" method="POST"> -->
+            <a href="login">Logout</a>
+        <!--</form> -->
     </body>
 </html>

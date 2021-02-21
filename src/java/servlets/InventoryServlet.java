@@ -31,6 +31,10 @@ public class InventoryServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("user_name");
+        if (user == null){
+            response.sendRedirect("login");
+            return;
+        }
          int totalUserValue = 0;
         String fileUser = "";
         String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
@@ -84,6 +88,27 @@ public class InventoryServlet extends HttpServlet {
        pw.println(newItem.formatToFile());
        pw.close();
        request.setAttribute("errorMessage", "Item Was Successfully Added to your Inventory");
+       int totalUserValue = 0;
+        String fileUser = "";
+        //String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
+        File file = new File(path);
+        Scanner inFile = new Scanner(file).useDelimiter(",");
+        while (inFile.hasNext()){
+            fileUser = inFile.next();
+            inFile.next();
+            inFile.next();
+               
+                
+                String cost = inFile.next();
+                 if (fileUser.equals(user)){
+            totalUserValue += Integer.parseInt(cost);
+            }
+                 if (inFile.hasNext()){
+                         inFile.nextLine();
+                 }
+        }
+         session.setAttribute("inventoryValue", totalUserValue);
+          inFile.close();
         
        
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);

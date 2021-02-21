@@ -58,6 +58,9 @@ public class AdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        response.sendRedirect("login");
         getServletContext().getRequestDispatcher("/WEB-INF/admin.jsp").forward(request, response);
 
     }
