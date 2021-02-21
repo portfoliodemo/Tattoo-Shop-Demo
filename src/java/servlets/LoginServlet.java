@@ -39,13 +39,34 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-   /*  String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
+        String userName = request.getParameter("userName");
+        String password = request.getParameter("password");
+         //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+    String path = getServletContext().getRealPath("/WEB-INF/users.txt");
 // to read files
     BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+    String[] users = null;
+    String line = "";
+    String splitBy = ",";
+    while ((line = br.readLine()) != null){
+        
+        users = line.split(splitBy);
+          for (String x : users){
+        if(x.equals(userName)){
+            request.setAttribute("errorMessage", "You Logged IN");
+            getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            
+        }
+        
+        }
+  
+    }
+       
+    }
+    
 // to append to a file
-    PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true))); 
-*/
+    //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true))); 
+
     }
 
-}
+
