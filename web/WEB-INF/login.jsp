@@ -17,7 +17,7 @@
              <input type="text" name="userName" id="userName">
              <br>
              <label for="password">Password:</label>
-             <input type="text" name="password" id="password">
+             <input type="password" name="password" id="password">
              <br>
              <input type="submit" value="Login">
             

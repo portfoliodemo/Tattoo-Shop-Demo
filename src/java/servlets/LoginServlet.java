@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,42 +42,34 @@ public class LoginServlet extends HttpServlet {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
-        //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         String path = getServletContext().getRealPath("/WEB-INF/users.txt");
-// to read files
-        BufferedReader br = new BufferedReader(new FileReader(new File(path)));
-        String[] usernames = null;
+
         String line = "";
-        String splitBy = ",";
-        while ((line = br.readLine()) != null) {
-            usernames = line.split(splitBy);
-            for (String x : usernames) {
-                if (x.equals(userName)) {
-                    for (String t : usernames) {
-                        if (t.equals(password)) {
-                            response.sendRedirect("inventory");
-                            session.setAttribute("user_name", userName);
-
-                        } else {
-                            request.setAttribute("errorMessage", "Invalid Login");
-                           
-                        }
-
-                    }
-
-                    // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-                } else {
-                    request.setAttribute("errorMessage", "Invalid Login");
-                   
-                }
-
-            }
-
+        ArrayList<String> validUsers = new ArrayList<String>( );
+        File file = new File(path);
+        Scanner inFile = new Scanner(file).useDelimiter(",");
+        while (inFile.hasNext()){
+            validUsers.add(inFile.next());
+            inFile.next();
+            inFile.nextLine();
         }
-        // getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        inFile.close();
+        if("admin".equals(userName) && "password".equals(password)){
+            response.sendRedirect("admin");
+            session.setAttribute("user_name", userName);
+            return;
+        }
+        else if (validUsers.contains(userName) && "password".equals(password)){
+            response.sendRedirect("inventory");
+            session.setAttribute("user_name", userName);
+            return;
+        }
+        else {
+            request.setAttribute("errorMessage", "Invalid Login");
+        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        }
+      
 
     }
 
-// to append to a file
-    //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true))); 
 }
