@@ -46,6 +46,6 @@ public class HomeItem {
 		return String.format("%s\t%s\t%s\t%s", user,category,itemName,price);
 	}
 	public String formatToFile() {
-		return String.format("%s , %s , %s , %s", user,category,itemName,price);
+		return String.format("%s,%s,%s,%s,", user,category,itemName,price);
 	}
 }
