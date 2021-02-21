@@ -14,10 +14,10 @@
         
         <form action="login" method="POST" >
             <label for="user_name">User Name:</label>
-             <input type="text" id="user_name">
+             <input type="text" name="userName" id="userName">
              <br>
              <label for="password">Password:</label>
-             <input type="text" id="password">
+             <input type="text" name="password" id="password">
              <br>
              <input type="submit" value="Login">
             
