@@ -28,6 +28,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import service.AccountService;
 
 /**
  *
@@ -54,33 +55,20 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
-
-        UserDB userdb = new UserDB();
-        try {
-            if (userdb.checkName(userName) != null && userdb.checkPassword(password) != null){
-                    if("admin".equals(userName) || "admin2".equals(userName)){
-                        response.sendRedirect("admin");
-                        session.setAttribute("user_name", userName);
-                        return;
-                        
-                    }
-                     else {
-                request.setAttribute("errorMessage", "Invalid Login");
-                getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-            }
-                    
-                }
-            }
-            
-            
-            
-          
-
-         catch (Exception ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+        AccountService as = new AccountService();
+        Users user = as.login(userName, password);
+        
+        if (user == null) {
+            getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            return;
         }
-      
-
+        
+        session.setAttribute("user_name", userName);
+        
+        if (user.getIsAdmin() == true) {
+            response.sendRedirect("admin");
+        } else {
+            response.sendRedirect("inventory");
+        }
     }
-
-}
+    }
