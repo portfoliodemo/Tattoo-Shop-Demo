@@ -18,6 +18,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.servlet.ServletException;
@@ -52,32 +54,30 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
-        /*EntityManager em = DBUtil.getEmFactory().createEntityManager();
-        TypedQuery<Users> query = em.createNamedQuery("Users.findAll", Users.class);
-        List<Users> results = query.getResultList();*/
 
         UserDB userdb = new UserDB();
-        if (userdb.get(userName) != null){
-            if (userdb.getPassword(password) != null){
-                 if("admin".equals(userName) || "admin2".equals(userName)){
-            response.sendRedirect("admin");
-            session.setAttribute("user_name", userName);
-            return;
-            
-        }
-                 
+        try {
+            if (userdb.checkName(userName) != null && userdb.checkPassword(password) != null){
+                    if("admin".equals(userName) || "admin2".equals(userName)){
+                        response.sendRedirect("admin");
+                        session.setAttribute("user_name", userName);
+                        return;
+                        
+                    }
+                     else {
+                request.setAttribute("errorMessage", "Invalid Login");
+                getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             }
-        }
-       
-        
-        else if (validUsers.contains(userName) && "password".equals(password)){
-            response.sendRedirect("inventory");
-            session.setAttribute("user_name", userName);
-            return;
-        }
-        else {
-            request.setAttribute("errorMessage", "Invalid Login");
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+                    
+                }
+            }
+            
+            
+            
+          
+
+         catch (Exception ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
       
 
