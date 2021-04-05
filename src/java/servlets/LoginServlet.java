@@ -5,6 +5,9 @@
  */
 package servlets;
 
+import DataAccess.UserDB;
+import Models.Users;
+import dataaccess.DBUtil;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,7 +16,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,24 +52,24 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
+        /*EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        TypedQuery<Users> query = em.createNamedQuery("Users.findAll", Users.class);
+        List<Users> results = query.getResultList();*/
 
-        String path = getServletContext().getRealPath("/WEB-INF/users.txt");
-
-        String line = "";
-        ArrayList<String> validUsers = new ArrayList<String>( );
-        File file = new File(path);
-        Scanner inFile = new Scanner(file).useDelimiter(",");
-        while (inFile.hasNext()){
-            validUsers.add(inFile.next());
-            inFile.next();
-            inFile.nextLine();
-        }
-        inFile.close();
-        if("admin".equals(userName) && "password".equals(password)){
+        UserDB userdb = new UserDB();
+        if (userdb.get(userName) != null){
+            if (userdb.getPassword(password) != null){
+                 if("admin".equals(userName) || "admin2".equals(userName)){
             response.sendRedirect("admin");
             session.setAttribute("user_name", userName);
             return;
+            
         }
+                 
+            }
+        }
+       
+        
         else if (validUsers.contains(userName) && "password".equals(password)){
             response.sendRedirect("inventory");
             session.setAttribute("user_name", userName);
