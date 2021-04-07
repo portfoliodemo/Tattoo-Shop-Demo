@@ -13,6 +13,25 @@
     </head>
     <body>
         <h1>Home Inventory for ${user_name}</h1>
+        
+        <table cellpadding="5" border="1">
+            <tr>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Price</th>
+                
+            </tr>
+            <c:forEach var="item" items="${itemsList}">
+                <tr> 
+                <td>${item.category.categoryName}</td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                </tr>
+            </c:forEach>
+        </table>
+        
+        
+    
 
         <h2>Add Item</h2>
 
