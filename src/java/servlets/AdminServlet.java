@@ -30,25 +30,9 @@ public class AdminServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("user_name");
-        if (!"admin".equals(user)){
-            response.sendRedirect("inventory");
-            return;
-        }
-        int totalValue = 0;
-        String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
-        File file = new File(path);
-        Scanner inFile = new Scanner(file).useDelimiter(",");
-        while (inFile.hasNext()){
-            for (int i = 0; i < 3; i++){
-                inFile.next();
-            }
-            String cost = inFile.next();
-            totalValue += Integer.parseInt(cost);
-            inFile.nextLine();
-            
-        }
-        request.setAttribute("totalValue", totalValue);
-        inFile.close();
+       
+        
+       
         
        
 
@@ -59,7 +43,6 @@ public class AdminServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        session.invalidate();
         response.sendRedirect("login");
         getServletContext().getRequestDispatcher("/WEB-INF/admin.jsp").forward(request, response);
 

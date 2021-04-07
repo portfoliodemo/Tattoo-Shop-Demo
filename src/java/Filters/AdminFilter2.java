@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package Filters;
 
 import java.io.IOException;
@@ -31,15 +33,16 @@ public class AdminFilter2 implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
             
         //before the servlet
-        HttpServletRequest httpRequest = (HttpServletRequest)request;
+       /* HttpServletRequest httpRequest = (HttpServletRequest)request;
         HttpSession session = httpRequest.getSession();
         
-        String user = (String)session.getAttribute("userName");
+        String user = (String)session.getAttribute("user_name");
         
         if (user != "admin" && user != "admin2"){
             HttpServletResponse httpResponse = (HttpServletResponse)response;
             httpResponse.sendRedirect("login");
-        }
+            return;
+        }*/
         
         
         chain.doFilter(request, response);

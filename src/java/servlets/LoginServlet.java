@@ -7,7 +7,7 @@ package servlets;
 
 import DataAccess.UserDB;
 import Models.Users;
-import dataaccess.DBUtil;
+import DataAccess.DBUtil;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -41,12 +41,10 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("user_name");
-       /* if (user != null){
-            response.sendRedirect("inventory");
-            return;
-        }*/
-        session.invalidate();
+      
+       // session.invalidate();
         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        
     }
 
     @Override
@@ -60,6 +58,7 @@ public class LoginServlet extends HttpServlet {
         
         if (user == null) {
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+             request.setAttribute("errorMessage", "Invalid Login");
             return;
         }
         

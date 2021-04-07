@@ -5,18 +5,22 @@
  */
 package servlets;
 
-import Models.HomeItem;
+import Models.Items;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import service.InventoryService;
 
 /**
  *
@@ -29,47 +33,35 @@ public class InventoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String user = (String) session.getAttribute("user_name");
-        if (user == null){
-            response.sendRedirect("login");
-            return;
+         InventoryService is = new InventoryService();
+        try {
+            HttpSession session = request.getSession();
+            String user = (String) session.getAttribute("user_name");
+            System.out.println(user);
+            List<Items> item = is.getAll(user);
+            request.setAttribute("itemsList", item);
+            
+        } catch (Exception ex) {
+            Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-         int totalUserValue = 0;
-        String fileUser = "";
-        String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
-        File file = new File(path);
-        Scanner inFile = new Scanner(file).useDelimiter(",");
-        while (inFile.hasNext()){
-            fileUser = inFile.next();
-            inFile.next();
-            inFile.next();
-               
-                
-                String cost = inFile.next();
-                 if (fileUser.equals(user)){
-            totalUserValue += Integer.parseInt(cost);
-            }
-                 if (inFile.hasNext()){
-                         inFile.nextLine();
-                 }
-        }
-         session.setAttribute("inventoryValue", totalUserValue);
-          inFile.close();
+         
+        
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
+       
+        
+        
         String category = request.getParameter("category");
         String itemName = request.getParameter("itemName");
         String price = request.getParameter("price");
-        String user = (String) session.getAttribute("user_name");
-        String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
         
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, true))); 
+     
+        
+      
         
         if ("".equals(category) || "".equals(itemName) || "".equals(price) )
         {
@@ -84,31 +76,9 @@ public class InventoryServlet extends HttpServlet {
                         .forward(request, response);
         }
         
-        HomeItem newItem = new HomeItem(user, category, itemName, price);
-       pw.println(newItem.formatToFile());
-       pw.close();
-       request.setAttribute("errorMessage", "Item Was Successfully Added to your Inventory");
-       int totalUserValue = 0;
-        String fileUser = "";
-        //String path = getServletContext().getRealPath("/WEB-INF/homeitems.txt");
-        File file = new File(path);
-        Scanner inFile = new Scanner(file).useDelimiter(",");
-        while (inFile.hasNext()){
-            fileUser = inFile.next();
-            inFile.next();
-            inFile.next();
-               
-                
-                String cost = inFile.next();
-                 if (fileUser.equals(user)){
-            totalUserValue += Integer.parseInt(cost);
-            }
-                 if (inFile.hasNext()){
-                         inFile.nextLine();
-                 }
-        }
-         session.setAttribute("inventoryValue", totalUserValue);
-          inFile.close();
+        
+      
+       
         
        
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
