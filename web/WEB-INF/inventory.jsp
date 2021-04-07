@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,8 +25,15 @@
             <c:forEach var="item" items="${itemsList}">
                 <tr> 
                 <td>${item.category.categoryName}</td>
-                <td>${item.name}</td>
+                <td>${item.itemName}</td>
                 <td>${item.price}</td>
+                <td>
+                        <form action="inventory" method="post" >
+                            <input type="submit" value="Delete">
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="itemID" value="${item.itemID}">
+                        </form>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
@@ -37,12 +45,10 @@
 
         <form action="inventory" method="POST">
             <label for="category">Category</label>
-
             <select name="category" id="category">
-                <option value="bedroom">Bedroom</option>
-                <option value="garage">Garage</option>
-                <option value="kitchen">Kitchen</option>
-                <option value="livingroom">Living Room</option>
+                <c:forEach var="category" items="${categories}">
+                <option value="${category.categoryID}">${category.categoryName}</option>
+                </c:forEach>
             </select> 
             <br>
             <label for ="itemName">Item Name</label>
@@ -51,8 +57,9 @@
             <label for ="price">Price</label>
             <input type="number" id="price" name="price" min="0" max="10000">
             <br>
-            <input type="submit" value="Add">
+            <input type="submit" name="action" value="add">
             <br>
+           
             
 
         </form>

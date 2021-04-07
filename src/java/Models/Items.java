@@ -64,6 +64,7 @@ public class Items implements Serializable {
         this.itemID = itemID;
         this.itemName = itemName;
         this.price = price;
+       
     }
 
     public Integer getItemID() {

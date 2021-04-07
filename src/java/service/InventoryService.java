@@ -5,8 +5,10 @@
  */
 package service;
 
+import DataAccess.CategoryDB;
 import DataAccess.ItemsDB;
 import DataAccess.UserDB;
+import Models.Categories;
 import Models.Items;
 import Models.Users;
 import java.util.List;
@@ -23,10 +25,12 @@ public class InventoryService {
     }
     public void insert(int itemID, String itemName, double price, String owner) throws Exception{
         Items item = new Items(0, itemName, price);
-        
+        CategoryDB catDB = new CategoryDB();
         UserDB userDB = new UserDB();
         Users user = userDB.get(owner);
         item.setOwner(user);
+        Categories category = catDB.get(itemID);
+        item.setCategory(category);
         ItemsDB itemDB = new ItemsDB();
         itemDB.insert(item);
         

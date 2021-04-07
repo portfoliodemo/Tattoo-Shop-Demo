@@ -5,6 +5,8 @@
  */
 package servlets;
 
+import DataAccess.CategoryDB;
+import Models.Categories;
 import Models.Items;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,13 +39,20 @@ public class InventoryServlet extends HttpServlet {
         try {
             HttpSession session = request.getSession();
             String user = (String) session.getAttribute("user_name");
-            System.out.println(user);
             List<Items> item = is.getAll(user);
             request.setAttribute("itemsList", item);
             
         } catch (Exception ex) {
             Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+           CategoryDB cb = new CategoryDB();
+        try {
+            List<Categories> list = cb.getAll();
+             request.setAttribute("categories", list);
+        } catch (Exception ex) {
+            Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
          
         
         getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
@@ -53,28 +62,44 @@ public class InventoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        
-        
+        HttpSession session = request.getSession();
+         String action = request.getParameter("action");
         String category = request.getParameter("category");
         String itemName = request.getParameter("itemName");
         String price = request.getParameter("price");
-        
-     
-        
-      
-        
-        if ("".equals(category) || "".equals(itemName) || "".equals(price) )
-        {
-            request.setAttribute("errorMessage", "Invalid. Please re-enter");
-               request.getRequestDispatcher("/WEB-INF/inventory.jsp")
-                        .forward(request, response);
-            //getServletContext().getRequestDispatcher("/WEB-INF/inventory.jsp").forward(request, response);
+         String user = (String) session.getAttribute("user_name");
+       String itemID = request.getParameter("itemID");
+          InventoryService is = new InventoryService();
+          
+          if (action.equals("add")) {
+            try {
+                double price2 = Double.parseDouble(price);
+                 int cat2 = Integer.parseInt(category);
+                is.insert(cat2, itemName, price2, user);
+            } catch (Exception ex) {
+                Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
+          else if (action.equals("delete")) {
+                
+                int itemID2 = Integer.parseInt(itemID);
+            try {
+                is.delete(itemID2);
+            } catch (Exception ex) {
+                Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          }
+          List<Items> item = null;
+          try {
+            
+            item = is.getAll(user);
+            request.setAttribute("itemsList", item);
+            
+        } catch (Exception ex) {
+            Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if (Integer.parseInt(price) < 0){
-             request.setAttribute("errorMessage", "Invalid. Please re-enter");
-               request.getRequestDispatcher("/WEB-INF/inventory.jsp")
-                        .forward(request, response);
-        }
+        
+    
         
         
       
