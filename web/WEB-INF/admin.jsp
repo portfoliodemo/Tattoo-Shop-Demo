@@ -12,9 +12,13 @@
         <h1>Admin Summary</h1>
         <%-- View all users --%>
         <h2>Manage Users</h2>
+        <h2>Welcome ${user_name}</h2>
           <p>
-            Welcome ${user_name}<br>
+            
             <a href=" <c:url value='/login' /> ">Log out</a>
+            
+        </p>
+        <p>
             <a href=" <c:url value='/inventory' /> ">Inventory</a>
         </p>
         <table cellpadding="5" border="1">
