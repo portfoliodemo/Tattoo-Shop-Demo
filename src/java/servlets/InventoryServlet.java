@@ -98,6 +98,13 @@ public class InventoryServlet extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+          try {
+              CategoryDB cb = new CategoryDB();
+            List<Categories> list = cb.getAll();
+             request.setAttribute("categories", list);
+        } catch (Exception ex) {
+            Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     
         
