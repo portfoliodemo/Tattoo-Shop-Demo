@@ -67,11 +67,11 @@
             ${errorMessage}
         </p>
         <br>
-        Total value in inventory: ${inventoryValue}
+        
         <br>
-        <!--<form action="login" method="POST"> -->
+        
         <a href="login">Logout</a>
-       ,<!-- </form> -->
+       
 
     </body>
 </html>
