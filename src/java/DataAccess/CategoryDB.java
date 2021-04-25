@@ -9,7 +9,10 @@ import Models.Categories;
 import Models.Items;
 import Models.Users;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 /**
@@ -37,8 +40,44 @@ public class CategoryDB {
          finally {
              em.close();
          }
+     }
+          public void update(Categories category) throws Exception{
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        
+        
+        try {
+            trans.begin();
+            em.merge(category);
+            trans.commit();
+        }
+        catch (Exception ex) {
+            trans.rollback();
+        }
+        finally {
+            em.close();
+        }
+    }
+           public int insert(Categories category) throws Exception {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            
+            
+            trans.begin();
+            em.persist(category);
+            trans.commit();
+            return 1;
+        } catch (Exception ex) {
+            trans.rollback();
+            Logger.getLogger(UserDB.class.getName()).log(Level.SEVERE, "Cannot insert " + category.toString(), ex);
+            throw new Exception("Error inserting user");
+        } finally {
+            em.close();
+        }
+    }
          
      
      }
     
-}
+

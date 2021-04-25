@@ -56,10 +56,12 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         AccountService as = new AccountService();
         Users user = as.login(userName, password);
+        boolean isActive = user.getActive();
         
-        if (user == null) {
+        if (user == null || isActive == false) {
+            request.setAttribute("errorMessage", "Invalid Login");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-             request.setAttribute("errorMessage", "Invalid Login");
+             
             return;
         }
         

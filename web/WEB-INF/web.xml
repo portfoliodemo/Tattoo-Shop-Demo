@@ -4,6 +4,14 @@
         <filter-name>AdminFilter</filter-name>
         <filter-class>Filters.AdminFilter</filter-class>
     </filter>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <servlet-name>AdminServlet</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <servlet-name>CategoriesServlet</servlet-name>
+    </filter-mapping>
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
         <filter-class>Filters.AuthenticationFilter</filter-class>
@@ -13,9 +21,10 @@
         <servlet-name>InventoryServlet</servlet-name>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>AdminFilter</filter-name>
-        <servlet-name>AdminServlet</servlet-name>
+        <filter-name>AuthenticationFilter</filter-name>
+        <servlet-name>AccountServlet</servlet-name>
     </filter-mapping>
+    
     <servlet>
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>servlets.AdminServlet</servlet-class>
@@ -28,6 +37,22 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>servlets.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>servlets.AccountServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoriesServlet</servlet-name>
+        <servlet-class>servlets.CategoriesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeactivatedServlet</servlet-name>
+        <servlet-class>servlets.DeactivatedServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
@@ -39,6 +64,22 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/account</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoriesServlet</servlet-name>
+        <url-pattern>/categories</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeactivatedServlet</servlet-name>
+        <url-pattern>/deactivated</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

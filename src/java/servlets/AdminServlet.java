@@ -78,9 +78,21 @@ public class AdminServlet extends HttpServlet {
                 String selectedUsername = request.getParameter("selectedUsername");
                 us.delete(selectedUsername);
             } else if (action.equals("edit")) {
-                us.update(username, password, email, firstname, lastname);
+                us.update(username, password, email, firstname, lastname, true);
             } else if (action.equals("add")) {
                 us.insert(username, password, email, firstname, lastname, true, false);
+            }
+            else if (action.equals("reactivate")){
+                String selectedUsername = request.getParameter("selectedUsername");
+                 us.updateActive(selectedUsername, true);
+            }
+            else if (action.equals("promote")){
+                String selectedUsername = request.getParameter("selectedUsername");
+                 us.promoteUser(selectedUsername, true);
+            }
+            else if (action.equals("demote")){
+                String selectedUsername = request.getParameter("selectedUsername");
+                 us.promoteUser(selectedUsername, false);
             }
         } catch (Exception ex) {
             request.setAttribute("errorMessage", " Could not perform that action.");

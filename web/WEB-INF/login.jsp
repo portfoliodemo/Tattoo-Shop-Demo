@@ -1,6 +1,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +23,8 @@
              <input type="submit" value="Login">
             
         </form>
+        
+        <a href=" <c:url value='/register' /> ">Don't have an account? register now!</a>
         
         <p>
         ${errorMessage}

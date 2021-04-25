@@ -69,8 +69,12 @@
         <br>
         
         <br>
-        
+         <p>
         <a href="login">Logout</a>
+        </p>
+        <p>
+        <a href="account">Manage Account</a>
+        </p>
        
 
     </body>

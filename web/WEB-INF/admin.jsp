@@ -21,14 +21,20 @@
         <p>
             <a href=" <c:url value='/inventory' /> ">Inventory</a>
         </p>
+        <p>
+            <a href=" <c:url value='/categories' /> ">Manage Categories</a>
+        </p>
         <table cellpadding="5" border="1">
             <tr>
                 <th>Username</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>E-mail</th>
-                <th>Delete</th>
                 <th>Edit</th>
+                <th>Delete</th>
+                <th>Re-Activate</th>
+                <th>Demote-admin</th>
+                <th>Promote-admin</th>
             </tr>
        <c:forEach var="user" items="${users}">
                 <tr>
@@ -47,6 +53,30 @@
                         <form action="admin" method="post" >
                             <input type="submit" value="Delete">
                             <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="selectedUsername" value="${user.username}">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="admin" method="post" >
+               
+                            <input type="submit" value="reactivate">
+                            <input type="hidden" name="action" value="reactivate">
+                            <input type="hidden" name="selectedUsername" value="${user.username}">
+                        </form>
+                    </td>
+                     <td>
+                        <form action="admin" method="post" >
+               
+                            <input type="submit" value="demote">
+                            <input type="hidden" name="action" value="demote">
+                            <input type="hidden" name="selectedUsername" value="${user.username}">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="admin" method="post" >
+               
+                            <input type="submit" value="promote">
+                            <input type="hidden" name="action" value="promote">
                             <input type="hidden" name="selectedUsername" value="${user.username}">
                         </form>
                     </td>
