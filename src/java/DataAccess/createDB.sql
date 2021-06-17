@@ -25,7 +25,7 @@ USE `homeinventorydb` ;
 -- Table `homeinventorydb`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `homeinventorydb`.`users` (
-  `Username` VARCHAR(10) NOT NULL,
+  `Username` VARCHAR(20) NOT NULL,
   `Password` VARCHAR(20) NOT NULL,
   `Email` VARCHAR(50) NOT NULL,
   `FirstName` VARCHAR(50) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `homeinventorydb`.`items` (
   `Category` INT NOT NULL,
   `ItemName` VARCHAR(45) NOT NULL,
   `Price` DOUBLE NOT NULL,
-  `Owner` VARCHAR(10) NOT NULL,
+  `Owner` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`ItemID`),
   INDEX `fk_items_Categories_idx` (`Category` ASC),
   INDEX `fk_items_users1_idx` (`Owner` ASC),
@@ -75,24 +75,11 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-INSERT INTO `categories` (`CategoryName`) VALUES ('kitchen');
-INSERT INTO `categories` (`CategoryName`) VALUES ('bathroom');
-INSERT INTO `categories` (`CategoryName`) VALUES ('living room');
-INSERT INTO `categories` (`CategoryName`) VALUES ('basement');
-INSERT INTO `categories` (`CategoryName`) VALUES ('bedrooom');
-INSERT INTO `categories` (`CategoryName`) VALUES ('garage');
-INSERT INTO `categories` (`CategoryName`) VALUES ('office');
-INSERT INTO `categories` (`CategoryName`) VALUES ('utility room');
-INSERT INTO `categories` (`CategoryName`) VALUES ('storage');
-INSERT INTO `categories` (`CategoryName`) VALUES ('other');
+INSERT INTO `categories` (`CategoryName`) VALUES ('Tattoo Supplies');
+INSERT INTO `categories` (`CategoryName`) VALUES ('Miscellaneous');
 
-INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('admin','password','cprg352+admin@gmail.com','Admin','Admin',1,1);
-INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('admin2','password','cprg352+admin2@gmail.com','Admin2','Admin2',0,1);
-INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('anne','password','cprg352+anne@gmail.com','Anne','Annerson',1,0);
-INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('barb','password','cprg352+barb@gmail.com','Barb','Barber',0,0);
+INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('admin','password','GoodFriendTattoo@gmail.com','Admin','Admin',1,1);
+INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('GoodFriendTattoo','password','GoodFriendTattoo@gmail.com','Admin2','Admin2',1,1);
 
-INSERT INTO `items` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (1,'blender',29.99,'anne');
-INSERT INTO `items` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (1,'toaster',19.99,'anne');
-INSERT INTO `items` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (3,'lamp',5,'anne');
-INSERT INTO `items` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (6,'winter tires',200,'anne');
-INSERT INTO `items` (`Category`,`ItemName`,`Price`,`Owner`) VALUES (5,'dresser',50,'anne');
+--INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 'Tattoo Supplies', 'Needles', 1, 'GoodFriendTattoo');
+

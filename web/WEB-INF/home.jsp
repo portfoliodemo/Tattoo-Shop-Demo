@@ -11,7 +11,7 @@
     <head>
         <title>Good Friend Tattoo</title>
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
-        <link href="<c:url value="./home.css" />" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
     </head>
     <body>
         <div class="wrapper">

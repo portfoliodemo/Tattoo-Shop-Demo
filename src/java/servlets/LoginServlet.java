@@ -68,7 +68,7 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("user_name", userName);
         
         if (user.getIsAdmin() == true) {
-            response.sendRedirect("admin");
+            response.sendRedirect("inventory");
         } else {
             response.sendRedirect("inventory");
         }

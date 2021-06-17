@@ -67,6 +67,7 @@ public class InventoryServlet extends HttpServlet {
         String category = request.getParameter("category");
         String itemName = request.getParameter("itemName");
         String price = request.getParameter("price");
+        String amount = request.getParameter("itemPrice");
          String user = (String) session.getAttribute("user_name");
        String itemID = request.getParameter("itemID");
           InventoryService is = new InventoryService();
@@ -86,6 +87,28 @@ public class InventoryServlet extends HttpServlet {
             try {
                 is.delete(itemID2);
             } catch (Exception ex) {
+                Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          }
+          else if (action.equals("plus")){
+              double price3 = Double.parseDouble(amount);
+              price3++;
+              int itemID3 = Integer.parseInt(itemID);
+              try {
+                  is.update(itemID3, itemName, price3, user);
+              }
+              catch (Exception ex) {
+                Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          }
+          else if (action.equals("minus")){
+              double price3 = Double.parseDouble(amount);
+              price3--;
+              int itemID3 = Integer.parseInt(itemID);
+              try {
+                  is.update(itemID3, itemName, price3, user);
+              }
+              catch (Exception ex) {
                 Logger.getLogger(InventoryServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
           }
