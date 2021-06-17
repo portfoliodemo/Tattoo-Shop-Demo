@@ -11,7 +11,7 @@
     <head>
         <title>Good Friend Tattoo</title>
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
-       <link href="./assets/css/home2.css" rel="stylesheet" type="text/css"/>
+       <link href="./assets/css/home.css" rel="stylesheet" type="text/css"/>
     </head>
     
     <body>
@@ -19,11 +19,11 @@
             <nav>
                 <!--<img src="assets/images/logo.jpg">-->
                 <div class="links" align="center">
-                    <a href="home.jsp">Home</a>
-                    <a href="about.jsp">About</a>
-                    <a href="policies.jsp">Policies</a>
-                    <a href="artists.jsp">Artists</a>
-                    <a href="contact.jsp">Contact Us</a>
+                    <a href="home">Home</a>
+                    <a href="about">About</a>
+                    <a href="policies">Policies</a>
+                    <a href="artists">Artists</a>
+                    <a href="contact">Contact Us</a>
                 </div>
             </nav>
             
@@ -52,7 +52,9 @@
         </div>
 
         <footer>
-
+        <p>
+        <a href="login">Employee Login</a>
+        </p>
         </footer>
     </body>
 </html>

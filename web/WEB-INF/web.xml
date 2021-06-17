@@ -127,10 +127,6 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>home</welcome-file>
-        <servlet-mapping>
-            <servlet-name>HomeServlet</servlet-name>
-            <url-pattern>*.css</url-pattern>
-        </servlet-mapping>
     </welcome-file-list>
     <error-page>
         <error-code>404</error-code>
