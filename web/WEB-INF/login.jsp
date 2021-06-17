@@ -9,7 +9,7 @@
         <title>Login</title>
     </head>
     
-        <h1>Home Inventory</h1>
+        <h1>Good Friend Tattoo</h1>
         
         <h2>Login</h2>
         
@@ -24,7 +24,7 @@
             
         </form>
         
-        <a href=" <c:url value='/register' /> ">Don't have an account? register now!</a>
+        
         
         <p>
         ${errorMessage}

@@ -24,7 +24,6 @@
         <filter-name>AuthenticationFilter</filter-name>
         <servlet-name>AccountServlet</servlet-name>
     </filter-mapping>
-    
     <servlet>
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>servlets.AdminServlet</servlet-class>
@@ -52,6 +51,10 @@
     <servlet>
         <servlet-name>DeactivatedServlet</servlet-name>
         <servlet-class>servlets.DeactivatedServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlets.HomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
@@ -81,16 +84,20 @@
         <servlet-name>DeactivatedServlet</servlet-name>
         <url-pattern>/deactivated</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>login</welcome-file>
+        <welcome-file>home</welcome-file>
     </welcome-file-list>
     <error-page>
-    <error-code>404</error-code>
-    <location>/Error404.jsp</location>
+        <error-code>404</error-code>
+        <location>/Error404.jsp</location>
     </error-page>
 </web-app>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <center>
-        <h1>Sorry, the page you requested were not found.</h1>
+        <h1>Sorry, the page you requested was not found.</h1>
     </center>
 </body>
 </html>
