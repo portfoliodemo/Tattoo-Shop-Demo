@@ -11,18 +11,19 @@
     <head>
         <title>Good Friend Tattoo</title>
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+       <link href="./assets/css/home2.css" rel="stylesheet" type="text/css"/>
     </head>
+    
     <body>
         <div class="wrapper">
             <nav>
                 <!--<img src="assets/images/logo.jpg">-->
                 <div class="links" align="center">
-                    <a href="home.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="policies.html">Policies</a>
-                    <a href="artists.html">Artists</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="home.jsp">Home</a>
+                    <a href="about.jsp">About</a>
+                    <a href="policies.jsp">Policies</a>
+                    <a href="artists.jsp">Artists</a>
+                    <a href="contact.jsp">Contact Us</a>
                 </div>
             </nav>
             
@@ -32,14 +33,15 @@
 
             <div class="main">
                 <div class="intro">
-                    <img src="pic1.jpg">
+                  
+                    <img src="./assets/images/pic1.jpg" alt=""/>
                     <p>
                         We are a team of four female artists dedicated to producing beautiful tattoos while cultivating a safe, professional, and welcoming studio atmosphere. The comfort and consent of every person who enters our space is our number one priority.
                     </p>
                 </div>
 
                 <div class="art">
-                    <img src="pic2.jpg">
+                    <img src="./assets/images/pic2.jpg" alt=""/>
                     <p>
                         We at Good Friend Tattoo believe in Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laboriosam, est odit vel odio quibusdam neque veritatis eveniet eius consectetur sint aspernatur dignissimos optio ab facilis dolores, dolore similique sequi.<br><br>
                         <a href="about.html">Meet Our Artists!</a>

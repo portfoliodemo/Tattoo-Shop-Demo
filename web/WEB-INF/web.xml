@@ -89,20 +89,14 @@
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>HomeServlet</servlet-name>
-        <url-pattern>*.css</url-pattern>
-    </servlet-mapping>
+   
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <servlet-mapping>
-        <servlet-name>HomeServlet</servlet-name>
-        <url-pattern>*.css</url-pattern>
-    </servlet-mapping>
+        
         <welcome-file>home</welcome-file>
     </welcome-file-list>
     <error-page>
