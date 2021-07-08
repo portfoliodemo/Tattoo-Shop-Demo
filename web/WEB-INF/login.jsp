@@ -7,21 +7,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
+        <link href="./assets/css/login.css" rel="stylesheet" type="text/css"/>
     </head>
-    
-        <h1>Good Friend Tattoo</h1>
+<body>
         
-        <h2>Login</h2>
+        <div class="login"> 
+            <h1>Good Friend Tattoo</h1>
+        
         
         <form action="login" method="POST" >
-            <label for="user_name">User Name:</label>
-             <input type="text" name="userName" id="userName">
+            
+             <input type="text" placeholder="Username" name="userName" id="username">
              <br>
-             <label for="password">Password:</label>
-             <input type="password" name="password" id="password">
+             
+             <input type="password" placeholder="Password" name="password" id="password">
              <br>
              <input type="submit" value="Login">
-            
+            </div> 
+        <div class="shadow"></div>
         </form>
         
         
@@ -29,5 +32,5 @@
         <p>
         ${errorMessage}
         </p>
-    
+        </body>  
 </html>

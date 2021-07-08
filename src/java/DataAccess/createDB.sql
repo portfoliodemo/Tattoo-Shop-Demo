@@ -52,7 +52,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `homeinventorydb`.`items` (
   `ItemID` INT NOT NULL AUTO_INCREMENT,
   `Category` INT NOT NULL,
-  `ItemName` VARCHAR(45) NOT NULL,
+  `ItemName` VARCHAR(50) NOT NULL,
   `Price` DOUBLE NOT NULL,
   `Owner` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`ItemID`),
@@ -75,11 +75,68 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-INSERT INTO `categories` (`CategoryName`) VALUES ('Tattoo Supplies');
+INSERT INTO `categories` (`CategoryID` ,  `CategoryName`) VALUES (1 ,'Tattoo Supplies');
 INSERT INTO `categories` (`CategoryName`) VALUES ('Miscellaneous');
 
 INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('admin','password','GoodFriendTattoo@gmail.com','Admin','Admin',1,1);
 INSERT INTO `users` (`Username`,`Password`,`Email`,`FirstName`,`LastName`,`Active`,`IsAdmin`) VALUES ('GoodFriendTattoo','password','GoodFriendTattoo@gmail.com','Admin2','Admin2',1,1);
 
---INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 'Tattoo Supplies', 'Needles', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Alcohol', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'All-Purpose Cleaner', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Bactine', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Bandages', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Barrier Film Large', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Barrier Film Small', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Bibs', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Bottle Bags', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Candy', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Clip Cord Sleeves', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Disinfectant', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Disposable Masks', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Distilled Water', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Drape Sheets', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Dry-Erase Markers', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Elastics', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Floor Cleaner', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Garbage Bags - Large', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Garbage Bags - Small', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Gloves', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Green Soap', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Hand Lotion', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Hand Sanitizer', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Hand Soap', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Hustle Butter', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Ink - Black', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Ink - Colour', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Ink Caps', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Ink Eeze', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Juice', 1, 'GoodFriendTattoo');
 
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Medical Tape', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Needles - Jean', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Needles - Kyle', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Needles - Steph', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Notebook', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Paper Towel', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Pencils', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Pens', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Post-its', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Printer Paper', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Printer ink: Black', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Printer ink: Colour', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Razors', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Rinse Cups', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Saniderm', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Scotch Tape', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Sensi Wrap 1 Inch', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Sensi Wrap 2 Inch', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Sharpies', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Shop Snacks', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Skin Markers', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Stencil Paper', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Tongue Depressors', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Tracing Paper', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Tubes', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Vaseline', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Water', 1, 'GoodFriendTattoo');
+INSERT INTO `items` (`ItemID`, `Category`, `ItemName`, `Price`, `Owner` ) VALUES (0, 1, 'Windex', 1, 'GoodFriendTattoo');
