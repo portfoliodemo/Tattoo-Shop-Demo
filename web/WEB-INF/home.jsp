@@ -54,6 +54,7 @@
         <footer>
         <p>
         <a href="login">Employee Login</a>
+        <a href="subscription">Subscription</a>
         </p>
         </footer>
     </body>
