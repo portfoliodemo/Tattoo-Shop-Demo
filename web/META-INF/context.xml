@@ -16,5 +16,20 @@
       removeAbandonedTimeout="60" 
       type="javax.sql.DataSource"         
             />
+   <Resource
+      name="jdbc/subscriptiondb" 
+      url="jdbc:mysql://localhost:3306/subscriptiondb?zeroDateTimeBehavior=convertToNull" 
+      username="root"
+      password="password" 
+      auth="Container" 
+      driverClassName="com.mysql.jdbc.Driver" 
+      logAbandoned="true" 
+      maxActive="100" 
+      maxIdle="30" 
+      maxWait="10000"  
+      removeAbandoned="true" 
+      removeAbandonedTimeout="60" 
+      type="javax.sql.DataSource"         
+            />
 </Context>
 

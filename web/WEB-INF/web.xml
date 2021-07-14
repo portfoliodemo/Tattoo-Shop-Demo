@@ -72,6 +72,14 @@
         <servlet-name>PoliciesServlet</servlet-name>
         <servlet-class>servlets.PoliciesServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>subscribe</servlet-name>
+        <servlet-class>servlets.subscribe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>subscribe</servlet-name>
+        <url-pattern>/subscription</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
