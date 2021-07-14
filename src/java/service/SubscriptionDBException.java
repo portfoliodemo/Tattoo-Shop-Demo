@@ -15,3 +15,4 @@ public class SubscriptionDBException extends Exception {
         super(message);
     }
 }
+
