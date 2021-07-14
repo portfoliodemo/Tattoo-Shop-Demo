@@ -93,7 +93,7 @@ th {
     width: 50px;
 }
 .additem{
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+    /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap'); */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -167,7 +167,7 @@ input {
               0 0 80px rgba(113,213,255, 0.3),
               0 0 160px rgba(113,213,255, 0.3),
               0 0 320px rgba(113,213,255, 0.3)
-}
+
   }
 }
 
