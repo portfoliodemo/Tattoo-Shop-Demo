@@ -182,7 +182,7 @@
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
     <footer>
-        <p>&copy; Good Friend Tattoo</p>
+        <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>        
     </footer>
 
     <script src="./assets/scripts/scripts.js"></script>

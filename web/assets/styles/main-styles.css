@@ -469,6 +469,10 @@ footer p {
     margin: 3em;
 }
 
+footer a {
+    display: block;
+}
+
 /* Media Queries */
 
 @media (max-width: 1180px) {
