@@ -50,12 +50,16 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, NullPointerException {
+        try {
         HttpSession session = request.getSession();
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
         AccountService as = new AccountService();
         Users user = as.login(userName, password);
+        
+       
+       
         boolean isActive = user.getActive();
         
         if (user == null || isActive == false) {
@@ -72,5 +76,15 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect("inventory");
         }
+        }
+         catch (Exception e){
+            request.setAttribute("errorMessage", "Invalid Login");
+            getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        }
     }
+    
     }
+    
+      
+    
+    
