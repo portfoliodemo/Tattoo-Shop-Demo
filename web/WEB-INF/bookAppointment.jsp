@@ -29,7 +29,7 @@
 
         <header>
             <!-- <h1><a href="./prototype.html" title="Good Friend Home">Good Friend</a></h1> -->
-            <h1><a href="./production.html" title="Good Friend Home">
+            <h1><a href="home" title="Good Friend Home">
                     <span id="letter-g">G</span><span id="letter-o-1">o</span><span id="letter-o-2">o</span><span id="letter-d-1">d</span>
                     <span id="letter-f">F</span><span id="letter-r">r</span><span id="letter-i">i</span><span id="letter-e">e</span><span id="letter-n">n</span><span id="letter-d-2">d</span>
                 </a></h1> 
