@@ -62,6 +62,26 @@ header h1 a {
     text-decoration: none;
     color: lightgray;
 }
+.contact-container{
+    font-family: 'Hachi Maru Pop', sans-serif;
+    text-align: center;
+}
+.contact-container div{
+    padding: 5px;
+}
+.btn-contact {
+    font-family: 'Hachi Maru Pop', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgba(255, 166, 0, 0.801);
+    padding: 1em;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+}
 
 nav {
     display: flex;

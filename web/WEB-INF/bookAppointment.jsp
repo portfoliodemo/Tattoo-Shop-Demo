@@ -1,6 +1,6 @@
 <%-- 
-    Document   : contact
-    Created on : Jun 17, 2021, 9:14:25 AM
+    Document   : bookAppointment
+    Created on : Jul 17, 2021, 6:21:26 AM
     Author     : 834171
 --%>
 
@@ -23,6 +23,7 @@
 
         <!-- CSS Stylesheet(s) -->
         <link rel="stylesheet" href="./assets/styles/main-styles.css">
+       
     </head>
     <body>
 
@@ -50,8 +51,8 @@
             </div>    
         </header>
         <div class="contact-container">
-            <form action="contact" method="POST">
-                <h1>Contact us</h1>
+            <form action="bookAppointment" method="POST">
+                <h1>Book an Appointment</h1>
                 <div>
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
@@ -65,17 +66,23 @@
                     <label for="name">Your Name:</label>
                     <input type="text" name="name" id="name" value="${name}">
                 </div>
-                <div>
-                    <label for="number">Your Mobile number:</label>
-                    <input type="tel" name="mobile" id="subject" value="${number}">
-                </div>
-                <div>    
+                 <div>    
                     <label for="email">Your Email:</label>
                     <input type="email" name="mail" id="mail" value="${email}">
                 </div>
                 <div>
-                    <label for="message">Your Message:</label>
-                    <input type="textbox" name="mess" id="body" value="${mess}">
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date"  value="${date}" >
+                </div>
+                <div>
+                    <label for="time">Select Time:</label>
+                    <select id="time" name="time">
+                        <option>Choose</option>
+                        <option value="11a.m. - 1p.m.">11a.m. - 1p.m.</option>
+                        <option value="1p.m. - 3p.m.">1p.m. - 3p.m.</option>
+                        <option value="3p.m. - 5p.m.">3p.m. - 5p.m.</option>
+                        <option value="5p.m. - 7p.m.">5p.m. - 7p.m.</option>
+                    </select>
                 </div>
                 <input class="btn-contact" type="submit" value="submit">
             </form>
@@ -84,29 +91,27 @@
             </center>
         </div>
         <section class="location">
-            <h2>Good Friend Tattoo Location</h2>
-            <address>
-                <p>1235 17 Ave SW #210, Calgary, AB T2T 3M9</p>
-                <iframe id="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.0062703011862!2d-114.09305256234344!3d51.037712549589735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171a31b1630d5%3A0xb28a1c952767a5a6!2sGood%20Friend%20Tattoo!5e0!3m2!1sen!2sca!4v1626202234927!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-                <p>
-                <h3>Hours of Operation:</h3>
-                <ul id="hours-operation">
-                    <li>Monday: 11a.m. - 7p.m.</li>
-                    <li>Tuesday: 11a.m. - 7p.m.</li>
-                    <li>Wednesday: 11a.m. - 7p.m.</li>
-                    <li>Thursday: 11a.m. - 7p.m.</li>
-                    <li>Friday: 11a.m. - 7p.m.</li>
-                    <li>Saturday: Closed</li>
-                    <li>Sunday: Closed</li>
-                </ul>
-                </p>
-            </address>
+            <h2>Good Friend Tattoo Location < /h2>
+                <address>
+                    <p>1235 17 Ave SW #210, Calgary, AB T2T 3M9</p>
+                    <iframe id="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.0062703011862!2d-114.09305256234344!3d51.037712549589735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171a31b1630d5%3A0xb28a1c952767a5a6!2sGood%20Friend%20Tattoo!5e0!3m2!1sen!2sca!4v1626202234927!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+                    <p>
+                    <h3>Hours of Operation:</h3>
+                    <ul id="hours-operation">
+                        <li>Monday: 11a.m. - 7p.m.</li>
+                        <li>Tuesday: 11a.m. - 7p.m.</li>
+                        <li>Wednesday: 11a.m. - 7p.m.</li>
+                        <li>Thursday: 11a.m. - 7p.m.</li>
+                        <li>Friday: 11a.m. - 7p.m.</li>
+                        <li>Saturday: Closed</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                    </p>
+                </address>
         </section>
         <footer>
-            <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>        
+            <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>
         </footer>
-
         <script src="./assets/scripts/scripts.js"></script>
-
     </body>
 </html>

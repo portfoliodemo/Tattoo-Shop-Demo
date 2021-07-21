@@ -39,12 +39,12 @@
                 <li><a href="#artist-section">Artists</a></li>
                 <li><a href="#tattoo-showcase">Tattoos</a></li>
                 <li><a href="#policy-section">Policies</a></li>
-                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="contact">Contact</a></li>
                 <!-- <li><a href="#">FAQ</a></li> -->
             </ul>
         </nav>
         <div class="toggle">
-            <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a>
+            <a class="btn" href="bookAppointment">Tattoo Consult</a>
             <!-- <button type="submit">Tattoo Inquiry</button> -->
             <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
         </div>    
@@ -83,7 +83,7 @@
     <section class="book-tattoo" id="tattoo-inquiry">
         <h2>Book A Tattoo Consult</h2>
         <p>Connect with one of our artists for a tattoo consultation and begin planning your tattoo!</p>
-        <p> <a class="btn-main-consult" id="btn-tattoo-review" href="#tattoo-inquiry">Book Tattoo</a></p>
+        <p> <a class="btn-main-consult" id="btn-tattoo-review" href="bookAppointment">Book Tattoo</a></p>
         <!-- <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a> -->
         <!-- TODO: Create form here! -->
         <div class="book-tattoo-btn" id="book-tattoo-form"></div>
