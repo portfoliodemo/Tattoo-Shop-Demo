@@ -44,7 +44,7 @@
                 </ul>
             </nav>
             <div class="toggle">
-                <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a>
+                <a class="btn" href="bookAppointment">Tattoo Consult</a>
                 <!-- <button type="submit">Tattoo Inquiry</button> -->
                 <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
             </div>    

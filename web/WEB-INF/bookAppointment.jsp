@@ -45,7 +45,7 @@
                 </ul>
             </nav>
             <div class="toggle">
-                <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a>
+                <a class="btn" href="bookAppointment">Tattoo Consult</a>
                 <!-- <button type="submit">Tattoo Inquiry</button> -->
                 <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
             </div>    
@@ -91,7 +91,7 @@
             </center>
         </div>
         <section class="location">
-            <h2>Good Friend Tattoo Location < /h2>
+            <h2>Good Friend Tattoo Location </h2>
                 <address>
                     <p>1235 17 Ave SW #210, Calgary, AB T2T 3M9</p>
                     <iframe id="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.0062703011862!2d-114.09305256234344!3d51.037712549589735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171a31b1630d5%3A0xb28a1c952767a5a6!2sGood%20Friend%20Tattoo!5e0!3m2!1sen!2sca!4v1626202234927!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
