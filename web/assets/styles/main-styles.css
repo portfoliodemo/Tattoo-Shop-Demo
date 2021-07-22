@@ -461,7 +461,28 @@ iframe {
 #scrollToTopBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
-  
+
+/* Image Stylings */
+
+/*.fig-contact-us {
+    display: flex;
+    justify-content: center;
+}*/
+
+/*.img-send-email {
+    width: 20%;
+    padding: 1em;
+}*/
+
+/*.fig-playful-cat {
+    display: flex;
+    justify-content: center;
+}*/
+
+/*.svg-playful-cat {
+    width: 100%;
+    padding: 1em;
+}*/
 
 /* Header Logo Colouring */
 

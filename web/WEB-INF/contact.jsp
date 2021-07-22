@@ -52,6 +52,7 @@
         <div class="contact-container">
             <form action="contact" method="POST">
                 <h1>Contact us</h1>
+                
                 <div>
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
@@ -83,6 +84,12 @@
                 <h3>${Message}</h3>
             </center>
         </div>
+            
+                            
+<!--        <figure class="fig-contact-us">
+            <img src="./assets/images/send-email-cropped.svg" class="img-send-email" alt="Send Email">
+        </figure>-->
+            
         <section class="location">
             <h2>Good Friend Tattoo Location</h2>
             <address>

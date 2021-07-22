@@ -183,7 +183,14 @@
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
     <footer>
-        <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>        
+        <p>
+            <a href="admin">Admin</a>
+            &copy; Good Friend Tattoo
+<!--        <figure class="fig-playful-cat">
+            <img src="./assets/images/playful-cat.svg" class="svg-playful-cat" alt="Playful Cat">
+        </figure>        -->
+        </p>
+
     </footer>
 
     <script src="./assets/scripts/scripts.js"></script>
