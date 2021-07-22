@@ -83,7 +83,7 @@
     <section class="book-tattoo" id="tattoo-inquiry">
         <h2>Book A Tattoo Consult</h2>
         <p>Connect with one of our artists for a tattoo consultation and begin planning your tattoo!</p>
-        <a href="contact" title="Contact Good Friend"><button class="btn-tattoo-consult">Book A Tattoo</button></a>
+        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend">Book A Tattoo</a></p>
         <!-- <p> <a class="btn-main-consult" id="btn-tattoo-review" href="bookAppointment">Book Tattoo</a></p> -->
         <!-- <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a> -->
         <!-- TODO: Create form here! -->

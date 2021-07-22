@@ -14,6 +14,9 @@ html {
 /* * {
     outline: 1px solid var(--blue) !important;
 } */
+/* * {
+    outline: 1px solid blue !important;
+} */
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -268,7 +271,7 @@ figure .artists-square {
     padding: 10px;
 }
 
-button.btn-tattoo-consult {
+.btn-tattoo-consult {
     min-width: fit-content;
     font-family: 'Hachi Maru Pop', sans-serif;
     color: #fff;
@@ -283,7 +286,7 @@ button.btn-tattoo-consult {
     border-color: rgba(255, 166, 0, 0.801);
 }
 
-button.btn-tattoo-consult:hover {
+.btn-tattoo-consult:hover {
     background-color: whitesmoke;
     transition-duration: 0.4s;
     color: rgba(255, 166, 0, 0.801);
@@ -301,6 +304,10 @@ button.btn-tattoo-consult:hover {
     background-color: whitesmoke;
     padding: 2em 5em;
     /* padding: 10px; */
+}
+
+.book-tattoo p:last-child {
+    margin-top: 2em;
 }
 
 .artists p a {
