@@ -122,3 +122,21 @@ input[type="submit"]:active {
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
 }
 
+.home-link {
+    text-align: center;
+    font-family: Arial, "Helvetica", sans-serif;
+    padding: 1em;
+}
+
+.home-link a {
+    text-decoration: none;
+    padding: 1em;
+    background-color: #b8ebed;
+    border-radius: 12px;
+}
+
+.home-link a:hover {
+    background-color: whitesmoke;
+    /*color: #b8ebed;*/
+}
+
