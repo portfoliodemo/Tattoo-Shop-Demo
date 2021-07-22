@@ -268,6 +268,28 @@ figure .artists-square {
     padding: 10px;
 }
 
+button.btn-tattoo-consult {
+    min-width: fit-content;
+    font-family: 'Hachi Maru Pop', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgba(255, 166, 0, 0.801);
+    padding: 1em;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-color: rgba(255, 166, 0, 0.801);
+}
+
+button.btn-tattoo-consult:hover {
+    background-color: whitesmoke;
+    transition-duration: 0.4s;
+    color: rgba(255, 166, 0, 0.801);
+    /* color: rgba(255, 166, 0, 0.801); */
+}
+
 .book-tattoo h2 {
     text-align: center;
     font-family: 'Hachi Maru Pop', sans-serif;
