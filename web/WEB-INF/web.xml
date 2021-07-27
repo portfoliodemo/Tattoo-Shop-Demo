@@ -80,6 +80,18 @@
         <servlet-name>BookServlet</servlet-name>
         <servlet-class>servlets.BookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>KyleServlet</servlet-name>
+        <servlet-class>servlets.KyleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JeanServlet</servlet-name>
+        <servlet-class>servlets.JeanServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StephServlet</servlet-name>
+        <servlet-class>servlets.StephServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>subscribe</servlet-name>
         <url-pattern>/subscription</url-pattern>
@@ -146,7 +158,18 @@
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>EnterPassword</env-entry-value>
     </env-entry>
-    
+    <servlet-mapping>
+        <servlet-name>KyleServlet</servlet-name>
+        <url-pattern>/kyle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JeanServlet</servlet-name>
+        <url-pattern>/jean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StephServlet</servlet-name>
+        <url-pattern>/steph</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

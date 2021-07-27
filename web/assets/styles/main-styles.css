@@ -14,9 +14,6 @@ html {
 /* * {
     outline: 1px solid var(--blue) !important;
 } */
-/* * {
-    outline: 1px solid blue !important;
-} */
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -37,7 +34,7 @@ header {
     border-bottom-color: lightgray;
     width: 100%;
     /* position: fixed; */
-    /* margin-bottom: 1em; */
+    /* hrgin-bottom: 1em; */
     /* background-color: rgba(224, 220, 220, 0.822); */
     /* justify-items: center; */
     /* position: fixed; */
@@ -88,6 +85,7 @@ header h1 a {
 
 nav {
     display: flex;
+    float: left;
     font-family: 'Hachi Maru Pop', sans-serif;
     justify-content: space-evenly;
     font-size: 1.5em;
@@ -105,9 +103,34 @@ ul {
     padding: 0;
     padding-inline-start: 0;
 }
-
-nav ul li {
+nav ul {
+    float: left;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+}
+.dropdown{
+    position: relative;
     display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    top: 60px;
+    position: absolute;
+    min-width: 140px;
+    min-height: 80px;
+    z-index: 10;
+    border: none;
+}
+.dropdown-content a{
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    
 }
 
 .location h3 {
@@ -132,7 +155,7 @@ p {
     padding: .5em;
 }
 
-nav a {
+nav a {  
     text-decoration: none;
     /* font-size: 2.25em; */
     display: block;
@@ -271,28 +294,6 @@ figure .artists-square {
     padding: 10px;
 }
 
-.btn-tattoo-consult {
-    min-width: fit-content;
-    font-family: 'Hachi Maru Pop', sans-serif;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1em;
-    background-color: rgba(255, 166, 0, 0.801);
-    padding: 1em;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-color: rgba(255, 166, 0, 0.801);
-}
-
-.btn-tattoo-consult:hover {
-    background-color: whitesmoke;
-    transition-duration: 0.4s;
-    color: rgba(255, 166, 0, 0.801);
-    /* color: rgba(255, 166, 0, 0.801); */
-}
-
 .book-tattoo h2 {
     text-align: center;
     font-family: 'Hachi Maru Pop', sans-serif;
@@ -304,10 +305,6 @@ figure .artists-square {
     background-color: whitesmoke;
     padding: 2em 5em;
     /* padding: 10px; */
-}
-
-.book-tattoo p:last-child {
-    margin-top: 2em;
 }
 
 .artists p a {
@@ -431,13 +428,6 @@ iframe {
     font-family: 'Hachi Maru Pop', sans-serif;
 }
 
-.contact {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
-    padding: 1em;
-}
-
 .contact h2 {
     font-family: 'Hachi Maru Pop', sans-serif;
 }
@@ -448,6 +438,13 @@ iframe {
     bottom: 20px; /* Place the button at the bottom of the page */
     right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
+.contact {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    padding: 1em;
+}
+
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: rgba(255, 166, 0, 0.801); /* Set a background color */
@@ -461,28 +458,7 @@ iframe {
 #scrollToTopBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
-
-/* Image Stylings */
-
-/*.fig-contact-us {
-    display: flex;
-    justify-content: center;
-}*/
-
-/*.img-send-email {
-    width: 20%;
-    padding: 1em;
-}*/
-
-/*.fig-playful-cat {
-    display: flex;
-    justify-content: center;
-}*/
-
-/*.svg-playful-cat {
-    width: 100%;
-    padding: 1em;
-}*/
+  
 
 /* Header Logo Colouring */
 

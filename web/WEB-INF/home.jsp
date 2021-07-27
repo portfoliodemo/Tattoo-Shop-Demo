@@ -36,7 +36,14 @@
         <nav>
             <ul>
                 <li><a href="#about-section">About</a></li>
-                <li><a href="#artist-section">Artists</a></li>
+               <div class="dropdown"> 
+               <li><a href="#artist-section">Artists</a></li>  
+                 <div class="dropdown-content">  
+                   <a href=" <c:url value='/kyle' /> ">Kyle</a>
+                   <a href=" <c:url value='/steph' /> ">Steph</a>
+                   <a href=" <c:url value='/jean' /> ">Jean</a>
+                </div>
+               </div>
                 <li><a href="#tattoo-showcase">Tattoos</a></li>
                 <li><a href="#policy-section">Policies</a></li>
                 <li><a href="contact">Contact</a></li>
