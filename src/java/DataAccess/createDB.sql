@@ -47,6 +47,15 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `homeinventorydb`.`subscription`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `homeinventorydb`.`subscription` (
+    email VARCHAR(40) NOT NULL, 
+    CONSTRAINT PK_username PRIMARY KEY (email));
+INSERT INTO subscription(email)
+VALUES ("admin@gmail.com");
+
+-- -----------------------------------------------------
 -- Table `homeinventorydb`.`items`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `homeinventorydb`.`items` (

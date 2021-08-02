@@ -72,6 +72,34 @@
         <servlet-name>PoliciesServlet</servlet-name>
         <servlet-class>servlets.PoliciesServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>subscribe</servlet-name>
+        <servlet-class>servlets.subscribe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>servlets.BookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>KyleServlet</servlet-name>
+        <servlet-class>servlets.KyleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JeanServlet</servlet-name>
+        <servlet-class>servlets.JeanServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StephServlet</servlet-name>
+        <servlet-class>servlets.StephServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TattoosServlet</servlet-name>
+        <servlet-class>servlets.TattoosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>subscribe</servlet-name>
+        <url-pattern>/subscription</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
@@ -119,6 +147,36 @@
     <servlet-mapping>
         <servlet-name>PoliciesServlet</servlet-name>
         <url-pattern>/policies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/bookAppointment</url-pattern>
+    </servlet-mapping>
+    <env-entry>
+        <env-entry-name>webmail-username</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>EnterEmail</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>webmail-password</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>EnterPassword</env-entry-value>
+    </env-entry>
+    <servlet-mapping>
+        <servlet-name>KyleServlet</servlet-name>
+        <url-pattern>/kyle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JeanServlet</servlet-name>
+        <url-pattern>/jean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StephServlet</servlet-name>
+        <url-pattern>/steph</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TattoosServlet</servlet-name>
+        <url-pattern>/tattoos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

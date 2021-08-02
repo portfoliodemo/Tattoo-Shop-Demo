@@ -11,15 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import service.Email;
 /**
  *
  * @author 709488
  */
 public class ContactServlet extends HttpServlet {
-
- 
-
    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -31,7 +28,25 @@ public class ContactServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/WEB-INF/contact.jsp").forward(request, response);
+        String mail = request.getParameter("mail");
+        String mess = request.getParameter("mess");
+        String mobile = request.getParameter("mobile");
+        String name = request.getParameter("name");
+        String artist = request.getParameter("artist");
+        String body = "Hi I am " +name+ ". My moblie number is " +mobile+ ".I want to contact " +artist+ ". "+ mess; 
+        String resultMessage = "";
+
+        try {
+            Email.sendEmail(mail, mess,mobile,name,body);
+            resultMessage = "The message was sent successfully";
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            resultMessage = "There were an error: " + ex.getMessage();
+        } finally {
+            request.setAttribute("Message", resultMessage);
+            getServletContext().getRequestDispatcher("/WEB-INF/contact.jsp").forward(
+                    request, response);
+        }
     }
 
 }

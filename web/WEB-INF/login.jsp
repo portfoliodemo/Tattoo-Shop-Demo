@@ -32,5 +32,10 @@
         <p>
         ${errorMessage}
         </p>
+        
+        <div class="home-link">
+            <a href="home" title="Good Friend Home">Good Friend Home</a>
+        </div>
+        
         </body>  
 </html>
