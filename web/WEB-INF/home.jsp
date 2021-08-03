@@ -186,6 +186,21 @@
         <h2>Contact Good Friend Tattoo</h2>
         <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
     </section>
+    
+    <section class="subscribe" id="subscribe-section">
+        <h2>Subscribe Good Friend Tattoo</h2>
+        <form action="home" method="POST">
+            <div class="form-group">    
+                <label>Your Email:</label>
+                <input type="email" name="mail" value="${email}">
+            </div>
+            <div class="in">
+            <input type="submit" name="action" value="subscribe">
+            <input type="submit" name="action" value="unsubscribe">
+            </div>
+        </form>
+        <p>${errorMessage}</p>
+    </section>
 
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
