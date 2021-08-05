@@ -36,11 +36,14 @@
 
             <nav>
                 <ul>
-                    <li><a href="#about-section">About</a></li>
-                    <li><a href="#artist-section">Artists</a></li>
-                    <li><a href="#tattoo-showcase">Tattoos</a></li>
-                    <li><a href="#policy-section">Policies</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="tattoos">Tattoos</a></li>
+                    <li><a href="policies">Policies</a></li>
                     <li><a href="contact">Contact</a></li>
+                    <li><a href="artist">Artists</a></li>
+                 
+                  
+                   
                     <!-- <li><a href="#">FAQ</a></li> -->
                 </ul>
             </nav>
