@@ -59,7 +59,7 @@
                 <div>
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
-                        <option>Choose</option>
+                        <option value="">Choose</option>
                         <option value="a">a</option>
                         <option value="b">b</option>
                         <option value="c">c</option>
@@ -75,19 +75,19 @@
                 </div>
                 <div>
                     <label for="date">Date:</label>
-                    <input type="date" name="date" id="date"  value="${date}" >
+                    <input  class="dt" type="date" name="date" id="date"  value="${date}" >
                 </div>
                 <div>
                     <label for="time">Select Time:</label>
                     <select id="time" name="time">
-                        <option>Choose</option>
+                        <option value="">Choose</option>
                         <option value="11a.m. - 1p.m.">11a.m. - 1p.m.</option>
                         <option value="1p.m. - 3p.m.">1p.m. - 3p.m.</option>
                         <option value="3p.m. - 5p.m.">3p.m. - 5p.m.</option>
                         <option value="5p.m. - 7p.m.">5p.m. - 7p.m.</option>
                     </select>
                 </div>
-                <input class="btn-contact" type="submit" value="submit">
+                <input class="btn-contact" type="submit" value="submit" onclick="validateform();">
             </form>
             <center>
                 <h3>${Message}</h3>
@@ -116,5 +116,6 @@
             <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>
         </footer>
         <script src="./assets/scripts/scripts.js"></script>
+        <script  type="text/javascript" src="./assets/scripts/bookscripts.js"></script>
     </body>
 </html>

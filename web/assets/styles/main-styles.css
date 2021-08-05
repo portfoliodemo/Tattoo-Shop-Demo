@@ -64,10 +64,19 @@ header h1 a {
 }
 .contact-container{
     font-family: 'Hachi Maru Pop', sans-serif;
-    text-align: center;
+   text-align: center;
 }
 .contact-container div{
     padding: 5px;
+}
+.contact-container div label{
+    width: 240px;
+    display: inline-block;
+    text-align: right;
+}
+.contact-container div select{
+    width: 163px;
+    display: inline-block;
 }
 .btn-contact {
     font-family: 'Hachi Maru Pop', sans-serif;
@@ -80,9 +89,12 @@ header h1 a {
     text-align: center;
     text-decoration: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 15px;
     padding: 10px;
 }
-
+.dt{
+    width: 163px;
+}
 nav {
     display: flex;
     float: left;
@@ -435,6 +447,18 @@ iframe {
 }
 
 .contact h2 {
+    font-family: 'Hachi Maru Pop', sans-serif;
+}
+.subscribe{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    padding: 1em;
+}
+.subscribe input{
+    margin-bottom: 5px;
+}
+.subscribe h2{
     font-family: 'Hachi Maru Pop', sans-serif;
 }
 

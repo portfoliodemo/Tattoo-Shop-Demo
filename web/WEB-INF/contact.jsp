@@ -56,14 +56,14 @@
                 <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
             </div>    
         </header>
-        <div class="contact-container">
+        <div class="contact-container" >
             <form action="contact" method="POST">
                 <h1>Contact us</h1>
                 
                 <div>
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
-                        <option>Choose</option>
+                        <option value="">Choose</option>
                         <option value="a">a</option>
                         <option value="b">b</option>
                         <option value="c">c</option>
@@ -85,7 +85,7 @@
                     <label for="message">Your Message:</label>
                     <input type="textbox" name="mess" id="body" value="${mess}">
                 </div>
-                <input class="btn-contact" type="submit" value="submit">
+                <input class="btn-contact" type="submit" value="submit" onclick="validateform();">
             </form>
             <center>
                 <h3>${Message}</h3>
@@ -119,8 +119,8 @@
         <footer>
             <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>        
         </footer>
-
         <script src="./assets/scripts/scripts.js"></script>
+        <script  type="text/javascript" src="./assets/scripts/contactscripts.js"></script>
 
     </body>
 </html>
