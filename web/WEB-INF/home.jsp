@@ -90,7 +90,7 @@
     <section class="book-tattoo" id="tattoo-inquiry">
         <h2>Book A Tattoo Consult</h2>
         <p>Connect with one of our artists for a tattoo consultation and begin planning your tattoo!</p>
-        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend">Book A Tattoo</a></p>
+        <p><a href="bookAppointment" class="btn-tattoo-consult" title="Book A Tattoo Appointment with Good Friend Tattoo">Book Tattoo</a></p>
         <!-- <p> <a class="btn-main-consult" id="btn-tattoo-review" href="bookAppointment">Book Tattoo</a></p> -->
         <!-- <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a> -->
         <!-- TODO: Create form here! -->
@@ -180,6 +180,7 @@
     <section class="policies" id="policy-section">
         <h2>Good Friend Tattoo Policies</h2>
         <p>We have numerous policies in place to protect the health and safety of all our customers and employees.</p>
+        <p><a href="policies" title="Policies of Good Friend Tattoo">Policies</a></p>
     </section>
 
     <section class="contact" id="contact-section">
