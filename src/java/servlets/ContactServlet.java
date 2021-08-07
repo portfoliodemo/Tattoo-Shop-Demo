@@ -41,7 +41,7 @@ public class ContactServlet extends HttpServlet {
             resultMessage = "The message was sent successfully";
         } catch (Exception ex) {
             ex.printStackTrace();
-            resultMessage = "There were an error: " + ex.getMessage();
+            resultMessage = "There was an error: " + ex.getMessage();
         } finally {
             request.setAttribute("Message", resultMessage);
             getServletContext().getRequestDispatcher("/WEB-INF/contact.jsp").forward(
