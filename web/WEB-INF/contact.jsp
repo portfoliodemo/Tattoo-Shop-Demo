@@ -109,9 +109,12 @@
                 </p>
             </address>
         </section>
-        <footer>
-            <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>        
-        </footer>
+    <footer>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
+
+    </footer>
         <script src="./assets/scripts/scripts.js"></script>
         <script  type="text/javascript" src="./assets/scripts/contactscripts.js"></script>
 

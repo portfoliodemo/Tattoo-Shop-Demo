@@ -65,7 +65,8 @@
                 <img src="./assets/images/Steph/steph-drawing-vase-window.jpg" alt="Drawing by Steph of a flower and vase next to a ladder leading up to a magical window.">
             </figure>
         </div>
-        <p>Good Friend Tattoo is made up of three passionate tattoo artists, Steph, Kyle and Jean! Together they embody the spirit of Good Friend Tattoo, which is to create and foster a welcoming and safe space for everyone. Ensuring that if someone wants to get a tattoo or even just have a conversation about tattoos, that they feel comfortable, informed and excited whether or not they ultimately choose to embark on or continue their tattoo journey!</p>
+        <p>Good Friend Tattoo is made up of three passionate tattoo artists, Steph, Kyle and Jean! Together they embody the spirit of Good Friend Tattoo, which is to create and foster a welcoming and safe space for everyone.</p>
+        <p>Ensuring that if someone wants to get a tattoo or even just have a conversation about tattoos, that they feel comfortable, informed and excited whether or not they ultimately choose to embark on or continue their tattoo journey!</p>
     </section>
     
     <section class="artists" id="artist-section">
@@ -90,12 +91,6 @@
         <!-- <div class="book-tattoo-btn" id="book-tattoo-form"></div> -->
     </section>
 
-    <section class="contact">
-        <h2>Contact Good Friend Tattoo</h2>
-        <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
-        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend Tattoo">Contact Good Friend</a></p>
-    </section>
-    
     <section class="subscribe" id="subscribe-section">
         <h2>Subscribe Good Friend Tattoo</h2>
         <form action="home" method="POST">
@@ -109,6 +104,12 @@
             </div>
         </form>
         <p>${errorMessage}</p>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact Good Friend Tattoo</h2>
+        <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
+        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend Tattoo">Contact Good Friend</a></p>
     </section>
 
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>

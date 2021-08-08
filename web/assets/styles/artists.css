@@ -262,7 +262,7 @@ nav a:hover {
 
 .artists-intro p {
     font-family: 'Roboto', sans-serif;
-    padding: 1em;
+    padding: 1em 4em;
 }
 
 .meet-artists {
@@ -599,6 +599,8 @@ footer p {
 
 footer a {
     display: block;
+    padding: 1em;
+    margin: 0 4em;
 }
 
 /* Media Queries */

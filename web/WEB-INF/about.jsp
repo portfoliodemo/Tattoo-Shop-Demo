@@ -59,7 +59,7 @@
     <section class="values" id="about-section">
         <h2>About Good Friend Tattoo!</h2>
         <!-- <h2>About Good Friend - Core Values</h2> -->
-        <p>Good Friend Tattoo was created to provide a safe space for everybody interested in the art of tattooing to feel welcome and respected, and to enable and support one another throughout all phases of each of our own unique tattoo journey.</p>
+        <p>Good Friend Tattoo was created to provide a safe space for everybody interested in the art of tattooing to feel welcome and respected, and to enable and support one another throughout all phases of our own unique tattoo journeys.</p>
     </section>
     
     <section class="location">

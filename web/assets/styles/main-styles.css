@@ -285,6 +285,10 @@ figure .welcome-latest {
     width: 50%;
 }
 
+.policies-goodfriend {
+    width: 25%;
+}
+
 figure .community-friendship {
     margin: 0;
 }
@@ -606,6 +610,8 @@ footer p {
 
 footer a {
     display: block;
+    padding: 1em;
+    margin: 0 4em;
 }
 
 /* Media Queries */

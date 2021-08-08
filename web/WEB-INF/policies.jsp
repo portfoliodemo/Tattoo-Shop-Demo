@@ -1,17 +1,18 @@
 <%-- 
-    Document   : policies
-    Created on : Jun 17, 2021, 9:15:24 AM
-    Author     : 709488
+    Document   : home
+    Created on : Jun 16, 2021, 4:29:37 PM
+    Author     : Capstone ITSD - Good Friend Tattoo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#127752; Good Friend Tattoo &#127752;</title>
+    <title>&#127752; About Good Friend Tattoo &#127752;</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- CSS Stylesheet(s) -->
-    <link rel="stylesheet" href="./assets/css/POLICIES.css">
+    <link rel="stylesheet" href="./assets/styles/main-styles.css">
 </head>
 <body>
 
@@ -35,11 +36,10 @@
         <nav>
             <ul>
                 <li><a href="about">About</a></li>
+                <li><a href="artists">Artists</a></li>  
                 <li><a href="tattoos">Tattoos</a></li>
                 <li><a href="policies">Policies</a></li>
-                 <li><a href="contact">Contact</a></li>
-                <li><a href="artists">Artists</a></li>
-                <!-- <li><a href="#">FAQ</a></li> -->
+                <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
         <div class="toggle">
@@ -49,70 +49,41 @@
         </div>    
     </header>
 
-    
-        <h1 align=center>PUBLIC POLICIES</h1>
-        <div class="section1">
-        <h2>Accceptance and Intolerance</h2>
+    <section class="home-splash">
+        <!-- Welcome to Good Friend! -->
+        <figure>
+            <img class="policies-goodfriend" src="./assets/images/Kyle/kyle-abstract-rectangles.jpg" alt="Hand-drawn colourful abstract rectangles.">
+        </figure>
+    </section>
 
-        <p>
-            Good Friend Tattoo has a policy of being accepting and encouraging towards the presence of people of every gender, sexuality, ethnicity, ability, religion, age and type. Our studio and its staff will do our utmost to ensure that every person entering our space feels comfortable, free, in possession of their own privacy and will to share or not share. Any reasonable request that they have in relation to this will be validated, respected and accommodated where possible. 
-        </p>
+    <section class="values" id="about-section">
+        <h2>Good Friend Tattoo Policies</h2>
+        <!-- <h2>About Good Friend - Core Values</h2> -->
+        <p>In light of the current global state we wanted to take this time to speak about our stance as allies to the BIPOC community as well as our plan of action to become more inclusive as artists. As we have now established our tattoo studio, we want to share that our values were set for Good Friend to be as inclusive, comfortable and progressive as possible. </p>
+        <p>This means that racism, sexism, homophobia, transphobia and discrimination of any kind are absolutely not tolerated from our artists or our clients. We’ve now realized that this is not enough and are working on doing more. We’ve been education ourselves to be actively anti-racist and are continuing to learn more every day.</p>
+        <p>Unfortunately, in the tattoo industry, there are artists who turn down clients because of the colour of their skin. This is because of ignorance and a lack of education and is absolutely unacceptable. We’ve done our research to make sure we can tattoo every skin tone to the best of our ability. Whether this means adjustments to the design, colour palette or technique, we are dedicated to providing you with options so you can have the art you want on your body. We are here to make sure you love the end result and feel heard and safe throughout the process.</p>
+        <p>We want to work on better representing the beauty of tattoos on BIPOC. This means diversifying our portfolios and ensuring no photos are filtered. There are a lot of different skin tones and undertones and we have more experience with some than others. We will offer cheaper rates for BIPOC in certain circumstances where we have less experience with that skin type. We will also be offering free colour testing. This means we will find colours we think will best suit your undertone and try them in small dots on an area of your body to see how they heal. This way if you’ve been thinking about a coloured design but have been worried about how it will turn out you can know before fully committing. </p>
+        <p>We are here to support and uplift more black artists. We empathize how challenging it is, especially in Calgary, as a black artist who has a dream of pursuing a career in tattooing. Currently, we do not have the space for an apprentice but openly and enthusiastically encourage black and indigenous artists to reach out to us with any questions about how to start in this industry. </p>
+        <p>We would also like to recognize that while we are making positive strides towards our core values, inevitably there will still be areas where we have to learn and grow. We welcome and encourage positive communication from anyone wishing to help us be more informed and inclusive moving forward, and thank you for your patience, forgiveness and understanding if we unwittingly err.</p>
+        <p>From all of us here at Good Friend Tattoo, to everyone helping to create a peaceful and inclusive space for all, thank you from the bottom of our hearts. &hearts; &hearts; &hearts; </p>
+    </section>
 
-        <p>
-            Good Friend Tattoo commits to maintain an environment that will will never contribute to the erasure of any identity or expression and will actively provide a space and attitude that seeks to enthusiastically accommodate any person with any identity or needs, within reason. Our studio will treat every patron or visitor with respect, dignity and an approach that recognizes their identity, if they would like that identity to be recognized.
-        </p>
+    <section class="contact" id="contact-section">
+        <h2>Connect with Good Friend Tattoo!</h2>
+        <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
+        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend Tattoo">Contact Good Friend</a></p>
+    </section>
 
-        <p>
-            During the booking process, the artist will volunteer a safe space for clients to share preferences of treatment that will best accommodate their needs. This can range from communicating accessibility requirements to disclosures of pain or trauma, the creation of a safe-word for the tattooing process or the need for a partition or extra privacy for their tattoo. However, any client can choose to abstain from providing information that does not immediately relate to the tattooing process. If they do not wish to have their identity projected in the studio and in communications with their artist, this will honoured.
-        </p>
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
-        <p>
-            To implement these values, Good Friend Tattoo will always be actively engaging in a process of ethical and informed consent where the clients comfort and safety are routinely checked in on and addressed if necessary. Consent is a process and one that we are committed to engaging with in order to cultivate and maintain an environment where everyone can feel safe, considered and free to communicate their needs, knowing they will be heard, taken seriously and will not face judgment. Good Friend Tattoo is also committed to seeking out training and education to further our knowledge and understanding of how to operate a safe and inclusive environment that prioritizes consent, trauma informed practice and individual autonomy. If you have or know of training that would further benefit our studio, please feel free to share these resources via our email: goodfriendtattoostudio@gmail.com.
-        </p>
-    </div>
+    <footer>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
 
-    <div class="section2">
-        <h2>Sexual Abuse and Harrassment</h2>
-        <p>
-            Sexual abuse and harassment
+    </footer>
 
-Good Friend Tattoo also has a no tolerance policy towards sexual violence or harassment, and attempts towards it.  
+    <script src="./assets/scripts/scripts.js"></script>
 
- 
-
-This can include: 
-
-    Breaking physical, verbal and social boundaries in a sexual nature that is not consented to,  
-
-    Deliberately making attempts to cause someone to be in an unneeded state of undress not consented to,
-
-    Attempting to use the conditions of the tattooing process to influence or precipitate a sexual interaction or gaze.
-        </p>
-
-        <p>
-            Further examples not necessarily related to the tattooing process include: 
-
-    Engaging in any unnecessary or inappropriate physical contact with someone without their prior consent, 
-
-    Any disrespectful or humiliating behaviour related to a person's sex or sexual orientation,
-
-    Unwanted sexual advances or unwanted sexual demands, verbal, written or physical,
-
-    Expressing any sexually transgressive comments or sexually based jokes, 
-
-    Any suggestions or innuendos directed at another person that can reasonably be read as sexual in nature.
-
-        </p>
-
-        <p>
-            These are, however, not the limitations of the definition of sexual harassment or sexual violence. Good Friend Tattoo will address any behaviour or reports from client or staff that can be reasonably defined as sexual harassment when and if it occurs. 
-        </p>
-
-    </div>
-
-    <div class="section3">
-        <h2></h2>
-    </div>
-
-    </body>
-    </html>
+</body>
+</html>

@@ -27,32 +27,29 @@
     </head>
     <body>
 
-        <header>
-            <!-- <h1><a href="./prototype.html" title="Good Friend Home">Good Friend</a></h1> -->
-            <h1><a href="home" title="Good Friend Home">
-                    <span id="letter-g">G</span><span id="letter-o-1">o</span><span id="letter-o-2">o</span><span id="letter-d-1">d</span>
-                    <span id="letter-f">F</span><span id="letter-r">r</span><span id="letter-i">i</span><span id="letter-e">e</span><span id="letter-n">n</span><span id="letter-d-2">d</span>
-                </a></h1> 
-
-            <nav>
-                <ul>
-                    <li><a href="about">About</a></li>
-                    <li><a href="tattoos">Tattoos</a></li>
-                    <li><a href="policies">Policies</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="artist">Artists</a></li>
-                 
-                  
-                   
-                    <!-- <li><a href="#">FAQ</a></li> -->
-                </ul>
-            </nav>
-            <div class="toggle">
-                <a class="btn" href="bookAppointment">Tattoo Consult</a>
-                <!-- <button type="submit">Tattoo Inquiry</button> -->
-                <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
-            </div>    
-        </header>
+    <header>
+        <!-- <h1><a href="./prototype.html" title="Good Friend Home">Good Friend</a></h1> -->
+        <h1><a href="home" title="Good Friend Home">
+        <span id="letter-g">G</span><span id="letter-o-1">o</span><span id="letter-o-2">o</span><span id="letter-d-1">d</span>
+        <span id="letter-f">F</span><span id="letter-r">r</span><span id="letter-i">i</span><span id="letter-e">e</span><span id="letter-n">n</span><span id="letter-d-2">d</span>
+        </a></h1> 
+       
+        <nav>
+            <ul>
+                <li><a href="about">About</a></li>
+                <li><a href="artists">Artists</a></li>  
+                <li><a href="tattoos">Tattoos</a></li>
+                <li><a href="policies">Policies</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="toggle">
+            <a class="btn" href="bookAppointment">Tattoo Consult</a>
+            <!-- <button type="submit">Tattoo Inquiry</button> -->
+            <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
+        </div>    
+    </header>
+        
         <div class="contact-container">
             <form action="bookAppointment" method="POST">
                 <h1>Book an Appointment</h1>
@@ -112,9 +109,12 @@
                     </p>
                 </address>
         </section>
-        <footer>
-            <p><a href="admin">Admin</a>&copy; Good Friend Tattoo</p>
-        </footer>
+    <footer>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
+
+    </footer>
         <script src="./assets/scripts/scripts.js"></script>
         <script  type="text/javascript" src="./assets/scripts/bookscripts.js"></script>
     </body>
