@@ -1,18 +1,18 @@
 <%-- 
-    Document   : about
-    Created on : Jun 17, 2021, 9:04:17 AM
-    Author     : 709488
+    Document   : home
+    Created on : Jun 16, 2021, 4:29:37 PM
+    Author     : Capstone ITSD - Good Friend Tattoo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#127752; Good Friend Tattoo &#127752;</title>
+    <title>&#127752; About Good Friend Tattoo &#127752;</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- CSS Stylesheet(s) -->
-    <link rel="stylesheet" href="./assets/css/ABOUT.css">
+    <link rel="stylesheet" href="./assets/styles/main-styles.css">
 </head>
 <body>
 
@@ -36,11 +36,10 @@
         <nav>
             <ul>
                 <li><a href="about">About</a></li>
+                <li><a href="artists">Artists</a></li>  
                 <li><a href="tattoos">Tattoos</a></li>
                 <li><a href="policies">Policies</a></li>
                 <li><a href="contact">Contact</a></li>
-                <li><a href="Artists">Artists</a></li>
-                <!-- <li><a href="#">FAQ</a></li> -->
             </ul>
         </nav>
         <div class="toggle">
@@ -49,48 +48,99 @@
             <i class="material-icons" id="hamburger-menu" role="navigation">menu</i>
         </div>    
     </header>
-        <div class="about">
-            <h2><strong>About Us</strong></h2>
+
+    <section class="home-splash">
+        <!-- Welcome to Good Friend! -->
+        <figure>
+            <img class="about-goodfriend" src="./assets/images/Kyle/kyle-wavy-roads-edit.jpg" alt="Hand-drawn colourful road leading to the horizon.">
+        </figure>
+    </section>
+
+    <section class="values" id="about-section">
+        <h2>About Good Friend Tattoo!</h2>
+        <!-- <h2>About Good Friend - Core Values</h2> -->
+        <p>Good Friend Tattoo was created to provide a safe space for everybody interested in the art of tattooing to feel welcome and respected, and to enable and support one another throughout all phases of each of our own unique tattoo journey.</p>
+    </section>
+    
+    <section class="location">
+        <h2>Good Friend Tattoo Location</h2>
+        <address>
+            <p>1235 17 Ave SW #210, Calgary, AB T2T 3M9</p>
+            <iframe id="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.0062703011862!2d-114.09305256234344!3d51.037712549589735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537171a31b1630d5%3A0xb28a1c952767a5a6!2sGood%20Friend%20Tattoo!5e0!3m2!1sen!2sca!4v1626202234927!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
             <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laborum sequi. Nisi dolorem error sequi ab veritatis id ad sint, enim magni, eius debitis animi odio est sit, quod corporis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nemo praesentium exercitationem? Assumenda libero rem laudantium quas quaerat corrupti porro provident exercitationem, repudiandae molestias! Tenetur mollitia neque doloremque quas assumenda?
+                <h3>Hours of Operation:</h3>
+                <ul id="hours-operation">
+                    <li>Monday: 11a.m. - 7p.m.</li>
+                    <li>Tuesday: 11a.m. - 7p.m.</li>
+                    <li>Wednesday: 11a.m. - 7p.m.</li>
+                    <li>Thursday: 11a.m. - 7p.m.</li>
+                    <li>Friday: 11a.m. - 7p.m.</li>
+                    <li>Saturday: Closed</li>
+                    <li>Sunday: Closed</li>
+                </ul>
             </p>
+        </address>
+    </section>
+    
+    <section class="artists-about" id="artist-section">
+        <h2>Good Friend Artists</h2>
+        <figure>
+            <img class="artists-square" src="./assets/images/square-colours-edit.jpg" alt="Good Friend flash day text on fridge surrounded by fruits and vegtables in a celebratory fashion.">
+            <!-- <img src="./assets/images/window-ladder.png" alt="Arms and Hands Linked to Create a Heart"> -->
+        </figure>
+        <h3>Instagrams</h3>
+        <p>Steph: <a href="https://www.instagram.com/cutebut.weird/" target="_blank">@cutebut.weird</a></p>
+        <p>Jean: <a href="https://www.instagram.com/conjeaniality/" target="_blank">@conjeaniality</a></p>
+        <p>Kyle: <a href="https://www.instagram.com/its.tatty.time/" target="_blank">@its.tatty.time</a></p>
+    </section>
 
-            <img src="./img2.jpg">
+    <section class="book-tattoo" id="tattoo-inquiry">
+        <h2>Book A Tattoo Consult</h2>
+        <p>Connect with one of our artists for a tattoo consultation and begin planning your tattoo!</p>
+        <p><a href="bookAppointment" class="btn-tattoo-consult" title="Book A Tattoo Appointment with Good Friend Tattoo">Book Tattoo</a></p>
+        <!-- <p> <a class="btn-main-consult" id="btn-tattoo-review" href="bookAppointment">Book Tattoo</a></p> -->
+        <!-- <a class="btn" href="#tattoo-inquiry">Tattoo Consult</a> -->
+        <!-- TODO: Create form here! -->
+        <!-- <div class="book-tattoo-btn" id="book-tattoo-form"></div> -->
+    </section>
 
-            <p>
+    <section class="policies" id="policy-section">
+        <h2>Good Friend Tattoo Policies</h2>
+        <p>We have numerous policies in place to protect the health and safety of all our customers and employees.</p>
+        <p><a href="policies" title="Policies of Good Friend Tattoo">Policies</a></p>
+    </section>
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, esse. Accusamus cum quae corporis incidunt nobis modi minus dicta, amet consectetur deleniti sequi vel perferendis at assumenda quis molestiae beatae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ea ipsa autem, voluptates labore mollitia placeat quidem quia fugit, molestiae optio. Quae, hic voluptatum! Unde maxime similique adipisci minus quae.
-            </p>
-            <p>
-
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ea tenetur reiciendis corporis! Enim voluptates maxime vel maiores quae hic numquam quo. Ab maxime perspiciatis, amet dolore tempora libero odit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nemo nesciunt impedit voluptate maiores voluptas ipsam! Minus dignissimos adipisci laboriosam vel quam vero quibusdam rerum sunt amet, excepturi nisi sapiente.
-            </p>
+    <section class="contact" id="contact-section">
+        <h2>Connect with Good Friend Tattoo!</h2>
+        <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
+        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend Tattoo">Contact Good Friend</a></p>
+    </section>
+    
+    <section class="subscribe" id="subscribe-section">
+        <h2>Subscribe Good Friend Tattoo</h2>
+        <form action="home" method="POST">
+            <div class="form-group">    
+                <label>Your Email:</label>
+                <input type="email" name="mail" value="${email}">
             </div>
-
-            <br><br>
-
-            <div class="columns">
-            <div class="meetart">
-            <h2 align="center">Meet the Artists!</h2>
-            <img src="./img3.jpg">
-            <p>Do take some time out to read about all of our artists. Each of our artists bring their own story and art to the table and ultimately in the making of Good Friend Tattoo. Just click <a href="">here</a> to start reading! You can also choose by taking a look at each pf their social media handles!</p>
+            <div class="in">
+            <input type="submit" name="action" value="subscribe">
+            <input type="submit" name="action" value="unsubscribe">
             </div>
+        </form>
+        <p>${errorMessage}</p>
+    </section>
 
-            <br><br>
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
-            <div class="readpolicy">
-            <h2 align="center">Policies</h2>
-            <img src="./img4.jpg">
-            <p>We here at Good Friend Tattoo strive to ensure a warm, free and inclusive environment. We are dedicated to the well-being of our clients, and that, till date remains our utmost importance. Head over to our <a href="">Policies Section</a> to read about what we believe in!</p>
-            </div>
-            </div>
+    <footer>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
 
-            <div class="contact">
-                <h2>Contact Us</h2>
-                <p>Still have questions? Feel free ot reach out to us and one of our members will be glad to answer all your questions! Just click <a href="">here</a> to view our contact info!
-                </p>
-            </div>
+    </footer>
 
-            
-        </body>
-    </html>
+    <script src="./assets/scripts/scripts.js"></script>
+
+</body>
+</html>

@@ -178,13 +178,9 @@
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
 
     <footer>
-        <p>
-            <a href="admin">Admin</a>
-            &copy; Good Friend Tattoo
-<!--        <figure class="fig-playful-cat">
-            <img src="./assets/images/playful-cat.svg" class="svg-playful-cat" alt="Playful Cat">
-        </figure>        -->
-        </p>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
 
     </footer>
 

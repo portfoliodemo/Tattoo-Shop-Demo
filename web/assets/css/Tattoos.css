@@ -641,6 +641,24 @@ footer a {
   
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Hachi Maru Pop', sans-serif;
+    text-align: center;
+    background-color: lightgray;
+    min-height: 200px;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+footer p {
+    margin: 0.5em;
+}
+
+footer a {
+    display: block;
+}
 
 
 

@@ -116,5 +116,12 @@
             <img class="jean-square" src="./assets/images/Jean/jean_vines.jpg" alt="Tattoo of some vines.">
         </section>
             </section>
+        
+        <footer>
+            <p>Artist owned collective on Treaty 7 Territory</p>
+            <p>All body's welcome, 18+.</p>
+            <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
+        </footer>
+        
     </body>
 </html>

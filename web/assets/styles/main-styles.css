@@ -270,7 +270,7 @@ nav a:hover {
     text-align: center;
     font-family: 'Hachi Maru Pop', sans-serif;
     background-color: white;
-    border-bottom-left-radius: 8em;
+    border-bottom-left-radius: 4em;
     /* margin-top: 1em; */
     /* border-top-left-radius: 3%; */
     /* border-style: inset; */
@@ -279,6 +279,10 @@ nav a:hover {
 
 figure .welcome-latest {
     width: 25%;
+}
+
+.about-goodfriend {
+    width: 50%;
 }
 
 figure .community-friendship {
@@ -311,8 +315,18 @@ figure .artists-square {
     background-color: white;
     /* min-height: 300px; */
     padding: 10px;
-    border-bottom-left-radius: 8em;
-    border-top-right-radius: 8em;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;
+}
+
+.artists-about {
+    text-align: center;
+    font-family: 'Hachi Maru Pop', sans-serif;
+    background-color: whitesmoke;
+    /* min-height: 300px; */
+    padding: 10px;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;
 }
 
 .book-tattoo h2 {
@@ -410,8 +424,8 @@ figure #img-secret-window {
     font-family: 'Roboto', sans-serif;
     background-color: white;
     padding: 2em 5em;
-    border-bottom-left-radius: 8em;
-    border-top-right-radius: 8em;    
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;    
     /* background-color: rgba(211, 211, 211, 0.685); */
 }
 
@@ -461,8 +475,8 @@ iframe {
     background-color: white;
     /* min-height: 300px; */
     padding: 1em;
-    border-bottom-left-radius: 8em;
-    border-top-right-radius: 8em;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;
 }
 
 .policies a {
@@ -501,7 +515,7 @@ iframe {
     font-family: 'Roboto', sans-serif;
     background-color: white;
     padding: 1em;
-    border-top-right-radius: 8em;
+    border-top-right-radius: 4em;
 }
 .subscribe input{
     margin-bottom: 5px;
@@ -577,15 +591,17 @@ iframe {
 
 footer {
     display: flex;
+    flex-direction: column;
     font-family: 'Hachi Maru Pop', sans-serif;
     text-align: center;
     background-color: lightgray;
     min-height: 200px;
     justify-content: space-around;
+    padding: 2em;
 }
 
 footer p {
-    margin: 3em;
+    margin: 0.5em;
 }
 
 footer a {
