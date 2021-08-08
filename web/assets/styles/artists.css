@@ -126,30 +126,6 @@ nav ul li{
     list-style: none;
 }
 
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content{
-    display: none;
-    top: 60px;
-    position: absolute;
-    min-width: 140px;
-    min-height: 80px;
-    z-index: 10;
-    border: none;
-}
-
-.dropdown-content a{
-    padding: 8px 12px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .dropdown-content{
-    display: block;    
-}
-
 .location h3 {
     font-family: 'Hachi Maru Pop', sans-serif;
 }
@@ -271,14 +247,32 @@ nav a:hover {
     font-family: 'Hachi Maru Pop', sans-serif;
     background-color: white;
     border-bottom-left-radius: 8em;
+    padding: 1em;
     /* margin-top: 1em; */
     /* border-top-left-radius: 3%; */
     /* border-style: inset; */
     /* border-radius: 50%; */
 }
 
+.artists-intro {
+    text-align: center;
+    font-family: 'Hachi Maru Pop', sans-serif;
+    padding: 1em;
+}
+
+.artists-intro p {
+    font-family: 'Roboto', sans-serif;
+    padding: 1em;
+}
+
+.meet-artists {
+    margin-bottom: 1em;
+}
+
 figure .welcome-latest {
-    width: 25%;
+    width: 30%;
+    border-radius: 1em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 figure .community-friendship {
@@ -291,6 +285,19 @@ figure .artists-square {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     /* border: ridge; */
     /* border-color: white; */
+}
+
+.artist-sketch-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5em;
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.artist-sketch-showcase img {
+    border-radius: 1em;
 }
 
 .values {
@@ -685,5 +692,6 @@ footer a {
         display: none;
     }
 }
+
 
 

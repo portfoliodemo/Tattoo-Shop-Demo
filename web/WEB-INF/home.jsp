@@ -36,18 +36,10 @@
         <nav>
             <ul>
                 <li><a href="about">About</a></li>
-               <div class="dropdown"> 
-               <li><a href="#artist-section">Artists</a></li>  
-                 <div class="dropdown-content">  
-                   <a href=" <c:url value='/kyle' /> ">Kyle</a>
-                   <a href=" <c:url value='/steph' /> ">Steph</a>
-                   <a href=" <c:url value='/jean' /> ">Jean</a>
-                </div>
-               </div>
+                <li><a href="artists">Artists</a></li>  
                 <li><a href="tattoos">Tattoos</a></li>
                 <li><a href="policies">Policies</a></li>
                 <li><a href="contact">Contact</a></li>
-                <!-- <li><a href="#">FAQ</a></li> -->
             </ul>
         </nav>
         <div class="toggle">
@@ -61,7 +53,7 @@
         <!-- Welcome to Good Friend! -->
         <figure>
             <img src="./assets/images/city-crop.jpg" alt="Hand painted mural of a dreamy city outline.">
-        </figure>
+        </figure> 
         <h2>Welcome to Good Friend Tattoo!</h2>
         <figure>
             <img class="welcome-latest" src="./assets/images/crop-secret-window-ladder.jpg" alt="Hand-drawn entrance with a ladder to a secret window.">
@@ -82,9 +74,9 @@
             <!-- <img src="./assets/images/window-ladder.png" alt="Arms and Hands Linked to Create a Heart"> -->
         </figure>
         <h3>Instagrams</h3>
-        <p><a href="https://www.instagram.com/cutebut.weird/" target="_blank">@cutebut.weird</a></p>
-        <p><a href="https://www.instagram.com/conjeaniality/" target="_blank">@conjeaniality</a></p>
-        <p><a href="https://www.instagram.com/its.tatty.time/" target="_blank">@its.tatty.time</a></p>
+        <p>Steph: <a href="https://www.instagram.com/cutebut.weird/" target="_blank">@cutebut.weird</a></p>
+        <p>Jean: <a href="https://www.instagram.com/conjeaniality/" target="_blank">@conjeaniality</a></p>
+        <p>Kyle: <a href="https://www.instagram.com/its.tatty.time/" target="_blank">@its.tatty.time</a></p>
     </section>
 
     <section class="book-tattoo" id="tattoo-inquiry">
@@ -116,27 +108,6 @@
             </p>
         </address>
     </section>
-
-    <!-- <section class="community">
-        <h2>Community Events</h2>
-        <p>Get ready for International Friendship Day! To help celebrate this awesome occasion we are giving away two free flash tattoo's to share with one of your best buds!</p>
-        <figure>
-            <img class="community-friendship" src="./assets/images/friendship-earth.jpg" alt="International Friendship Day. A friendly sketch of two children sitting happily on the Earth.">
-            <figcaption>International Friendship Day</figcaption>
-        </figure>
-        <p>To enter the contest simply enter your email address below to signup for Good Friend Tattoo's newsletter!</p>
-        <p> Already signed up for Good Friend Tattoo's email list? No problem! That means you are automatically entered to win! We'll only send out emails once in a while and we promise to never share your info with anyone else!</p>
-        
-        <div class="email-signup-container">
-            <label for="email-signup"> Email signup:</label> 
-            <input type="email" class="join-email-list" name="email-signup" placeholder="newfriend@goodfriend.com" maxlength="80">
-            <button type="submit" class="signup-btn">Submit</button>
-        </div>
-        <figure>
-            <img class="community-friendship" src="./assets/images/butterfly-tree-DEMO-ONLY-unlicensed.jpg" alt="Butterfly Tree">
-            <figcaption>Butterfly Tree</figcaption>
-        </figure>
-    </section> -->
 
     <section class="portfolio-splash" id="tattoo-showcase">
         <h2>&#x263C; Friends of Good Friend!</h2>
@@ -184,8 +155,9 @@
     </section>
 
     <section class="contact" id="contact-section">
-        <h2>Contact Good Friend Tattoo</h2>
+        <h2>Connect with Good Friend Tattoo!</h2>
         <p>There are multiple ways to get in touch with Good Friend, reach out now and let's be friends!</p>
+        <p><a href="contact" class="btn-tattoo-consult" title="Contact Good Friend Tattoo">Contact Good Friend</a></p>
     </section>
     
     <section class="subscribe" id="subscribe-section">
