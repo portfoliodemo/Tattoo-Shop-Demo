@@ -57,9 +57,9 @@
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
                         <option value="">Choose</option>
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
+                        <option value="Steph">Steph</option>
+                        <option value="Kyle">Kyle</option>
+                        <option value="Jean">Jean</option>
                     </select>
                 </div>
                 <div>
@@ -84,7 +84,7 @@
                         <option value="5p.m. - 7p.m.">5p.m. - 7p.m.</option>
                     </select>
                 </div>
-                <input class="btn-contact" type="submit" value="submit" onclick="validateform();">
+                <input class="btn-contact" type="submit" value="submit" onclick="return validateform(event);">
             </form>
             <center>
                 <h3>${Message}</h3>

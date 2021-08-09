@@ -57,9 +57,9 @@
                     <label for="artistname">Select Artist:</label>
                     <select id="artistname" name="artist">
                         <option value="">Choose</option>
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
+                        <option value="Steph">Steph</option>
+                        <option value="Kyle">Kyle</option>
+                        <option value="Jean">Jean</option>
                     </select>
                 </div>
                 <div>
@@ -76,9 +76,9 @@
                 </div>
                 <div>
                     <label for="message">Your Message:</label>
-                    <input type="textbox" name="mess" id="body" value="${mess}">
+                    <textarea type="textarea" name="mess" id="body" value="${mess}"></textarea>
                 </div>
-                <input class="btn-contact" type="submit" value="submit" onclick="validateform();">
+                <input class="btn-contact" type="submit" value="submit" onclick="return validateform(event);">
             </form>
             <center>
                 <h3>${Message}</h3>

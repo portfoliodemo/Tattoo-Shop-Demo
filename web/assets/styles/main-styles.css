@@ -81,17 +81,28 @@ header h1 a {
 }
 .btn-contact {
     font-family: 'Hachi Maru Pop', sans-serif;
-    color: #fff;
+    color: whitesmoke;
+    border: none;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: rgba(255, 166, 0, 0.801);
-    padding: 1em;
+    padding: 0.75em;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-top: 15px;
-    padding: 10px;
+}
+.contact-container #body{
+  display: inline;
+  resize: vertical;
+  min-height: 50px;
+  line-height: 20px;
+}
+.btn-contact:hover {
+    color: blue;
+    transition-duration: 0.4s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .dt{
     width: 163px;
@@ -525,8 +536,31 @@ iframe {
     padding: 1em;
     border-top-right-radius: 4em;
 }
-.subscribe input{
+.subscribe .in input{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Hachi Maru Pop', sans-serif;
+    background-color: rgba(255, 166, 0, 0.801);
+    color: whitesmoke;
+    padding: 0.50em;
+    border-radius: 12px;
+    margin-top: 1em;
     margin-bottom: 5px;
+    border:none;
+}
+.subscribe .form-group input{
+    width: 16em;
+    height: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+.subscribe .form-group label{
+   font-size: 20px;
+}
+.subscribe .in input:hover {
+    color: blue;
+    transition-duration: 0.4s;
+   
 }
 .subscribe h2{
     font-family: 'Hachi Maru Pop', sans-serif;

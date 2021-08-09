@@ -33,7 +33,7 @@ public class ContactServlet extends HttpServlet {
         String mobile = request.getParameter("mobile");
         String name = request.getParameter("name");
         String artist = request.getParameter("artist");
-        String body = "Hi I am " +name+ ". My moblie number is " +mobile+ ".I want to contact " +artist+ ". "+ mess; 
+        String body = "Hi I am " +name+ ". My moblie number and Email is " +mobile+ ","+mail+ ".I want to contact " +artist+ ". "+ mess; 
         String resultMessage = "";
 
         try {

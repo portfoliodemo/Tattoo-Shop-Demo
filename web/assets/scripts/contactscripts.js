@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-function validateform() {
+function validateform(event) {
     var artist = document.getElementById('artistname').value;
     var name = document.getElementById('name').value;
     var mobile = document.getElementById('subject').value;
@@ -13,38 +13,56 @@ function validateform() {
 
     if (artist == null || artist == "") {
         alert("Please select artist");
+         event.preventDefault();
         return false;
     }
     if (name == null || name == "") {
         alert("Name can't be blank");
+         event.preventDefault();
+        return false;
+    }
+     if (body == null || body == "") {
+        alert("Please enter your message");
+        event.preventDefault();
         return false;
     }
 // Validate mobile number
     if (mobile == "" || mobile == null) {
         alert("Please enter your mobile number");
+         event.preventDefault();
+        return false;
     } else {
         var regex = /^[1-9]\d{9}$/;
         if (regex.test(mobile) === false) {
             alert("Please enter a valid 10 digit mobile number");
+            event.preventDefault();
+            return false;
         } else {
-            printError("mobileErr", "");
-            mobileErr = false;
+            alert("Please enter a valid 10 digit mobile number");
+           
+            location.reload();
+            return false;
         }
     }
     if (mail == "") {
+       
         alert("Please enter your email address");
+        event.preventDefault();
+        return false;
     } else {
         // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
         if (regex.test(mail) === false) {
+            
             alert("Please enter a valid email address");
+          event.preventDefault();
+           
+            return false;
         } else {
-            printError("emailErr", "");
-            emailErr = false;
+            alert("Please enter a valid email address");
+            event.preventDefault();    
+            return false;
         }
     }
-    if (body == null || body == "") {
-        alert("Please enter your message");
-        return false;
-    }
+   
 }

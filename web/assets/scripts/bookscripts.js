@@ -14,22 +14,27 @@ function validateform() {
 
     if (artist == null || artist == "") {
         alert("Please select artist");
+        event.preventDefault();
         return false;
     }
     if (name == null || name == "") {
         alert("Name can't be blank");
+        event.preventDefault();
         return false;
     }
     if (date == null || date == "") {
         alert("Please select the date");
+        event.preventDefault();
         return false;
     }
     if (time == null || time == "") {
         alert("Please select time");
+        event.preventDefault();
         return false;
     }
     if (mail == "") {
         alert("Please enter your email address");
+        event.preventDefault();
     } else {
         // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
