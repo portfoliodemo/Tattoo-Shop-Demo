@@ -54,6 +54,7 @@
             <figure class="meet-artists">
                 <img class="welcome-latest" src="./assets/images/good-friend-crew.jpg" alt="Steph, Jean and Kyle, the three tattoo artists who make up Good Friend Tattoo, relaxing together in a balcony selfie.">
             </figure>
+        <p>Good Friend Tattoo is made up of three passionate tattoo artists, Steph, Kyle and Jean! Together they embody the spirit of Good Friend Tattoo, which is to create and foster a welcoming and safe space for everyone.</p>
         <div class="artist-sketch-showcase">
             <figure>
                 <img src="./assets/images/Kyle/kyle-friends-sky.jpg" alt="Drawing by Kyle of three friends under an artistic sky.">
@@ -65,7 +66,6 @@
                 <img src="./assets/images/Steph/steph-drawing-vase-window.jpg" alt="Drawing by Steph of a flower and vase next to a ladder leading up to a magical window.">
             </figure>
         </div>
-        <p>Good Friend Tattoo is made up of three passionate tattoo artists, Steph, Kyle and Jean! Together they embody the spirit of Good Friend Tattoo, which is to create and foster a welcoming and safe space for everyone.</p>
         <p>Ensuring that if someone wants to get a tattoo or even just have a conversation about tattoos, that they feel comfortable, informed and excited whether or not they ultimately choose to embark on or continue their tattoo journey!</p>
     </section>
     
