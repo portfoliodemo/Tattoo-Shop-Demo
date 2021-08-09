@@ -333,6 +333,10 @@ figure .artists-square {
     border-top-right-radius: 4em;
 }
 
+.artists-about p a {
+    text-decoration: none;
+}
+
 .book-tattoo h2 {
     text-align: center;
     font-family: 'Hachi Maru Pop', sans-serif;
