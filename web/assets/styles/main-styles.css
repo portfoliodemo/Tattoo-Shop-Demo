@@ -528,6 +528,28 @@ iframe {
     font-family: 'Hachi Maru Pop', sans-serif;
 }
 
+figure .artist-tattoo-portfolio {
+    width: 12.5%;
+    border-radius: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.artist-background {
+    background-color: rgba(255, 166, 0, 0.801);
+    padding: 1em;
+    margin: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2em;
+}
+
+.artist-insta {
+    background-color: whitesmoke;
+}
+
+.artist-insta a {
+    text-decoration: none;
+}
+
 #scrollToTopBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -659,8 +681,12 @@ footer a {
         background-color: whitesmoke;
         padding: 2em 20em;
     }
+    
+}
 
-    .portfolio-splash .tattoo-gallery-wrapper .tattoo-gallery {
+@media (min-width: 860px) {
+    
+        .portfolio-splash .tattoo-gallery-wrapper .tattoo-gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
     

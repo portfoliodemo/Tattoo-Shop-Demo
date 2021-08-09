@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>&#127752; Good Friend Tattoo &#127752;</title>
+        <title>&#127752; Good Friend Tattoos &#127752;</title>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <!-- CSS Stylesheet(s) -->
-        <link rel="stylesheet" href="./assets/css/Tattoos.css">
+        <link rel="stylesheet" href="./assets/styles/main-styles.css">
     </head>
     <body>
 
@@ -49,79 +49,198 @@
         </div>    
     </header>
                                
-        <section class="stephstattoos">
-            <h2 class="names">STEPH</h2>
-             <div></div>   
-            <section class="tattoo-wrapper">
-                
-                <img class="steph-square" src="./assets/images/Steph/steph_alien.jpg" alt="Tattoo of an alien.">
-               
-                <img class="steph-square" src="./assets/images/Steph/steph_backpiece.jpg" alt="Tattoo of a leafy full backpiece.">
-                <img class="steph-square" src="./assets/images/Steph/steph_bowie.jpg" alt="Tattoo of david bowie.">
-                <img class="steph-square" src="./assets/images/Steph/steph_castle.jpg" alt="Tattoo of a castle.">
-                <img class="steph-square" src="./assets/images/Steph/steph_chair.jpg" alt="Tattoo of a funky chair.">
-                <img class="steph-square" src="./assets/images/Steph/steph_face.jpg" alt="Tattoo of a face.">
-                <img class="steph-square" src="./assets/images/Steph/steph_floathouse.jpg" alt="Tattoo of a floating house.">
-                <img class="steph-square" src="./assets/images/Steph/steph_fox.jpg" alt="Tattoo of a fox.">
-                <img class="steph-square" src="./assets/images/Steph/steph_juicebox.jpg" alt="Tattoo of a juicebox.">
-                <img class="steph-square" src="./assets/images/Steph/steph_lotus.jpg" alt="Tattoo of a lotus flower.">
-                <img class="steph-square" src="./assets/images/Steph/steph_paintbrush.jpg" alt="Tattoo of a paintbrush.">
-                <img class="steph-square" src="./assets/images/Steph/steph_skull.jpg" alt="Tattoo of a skull.">
-                <img class="steph-square" src="./assets/images/Steph/steph_sun.jpg" alt="Tattoo of a sun.">
-                <img class="steph-square" src="./assets/images/Steph/steph_vial.jpg" alt="Tattoo of a crystal vial.">
-                <img class="steph-square" src="./assets/images/Steph/steph_vines.jpg" alt="Tattoo of some vines.">
-                
-            </section>
-      <div></div>   
-        </section>
-                        
-        <section class="kylestattoos">
-            <h2 class="names">Kyle</h2>
-            <section class="tattoo-wrapper">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-building-flowers.jpg" alt="Tattoo of a building flowers.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-building-scene.jpg" alt="Tattoo of a building scene.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-checkered-path.jpg" alt="Tattoo of checkered path.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-chill-smoker.jpg" alt="Tattoo of a chill smoker.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-colour-tv.jpg" alt="Tattoo of a colour-tv.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-disco-ball.jpg" alt="Tattoo of a disco ball.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-flowerpot-corner-checkered-floor.jpg" alt="Tattoo of a flowerpot.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-grocery-cart.jpg" alt="Tattoo of a grocery cart.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-lil-pathway.jpg" alt="Tattoo of a lil pathway.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-silly-puppy-mountains.jpg" alt="Tattoo of a silly puppy.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-spooky-house.jpg" alt="Tattoo of a spooky house.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-stairwayRectangle.jpg" alt="Tattoo of a stairway.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-sweet-cow.jpg" alt="Tattoo of a sweet cow.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-tattoo-socks-n-sandals.jpg" alt="Tattoo of a socks n sandals.">
-                <img class="kyle-square" src="./assets/images/Kyle/kyle-water-flowers.jpg" alt="Tattoo of water flowers.">
-            </section>
-
-        </section>
-        <section class="jeanstattoos">
-            <h2 class="names">Jean</h2>
-            <section class="tattoo-wrapper">
-            <img class="jean-square" src="./assets/images/Jean/jean_barbwire.jpg" alt="Tattoo of barbwire.">
-            <img class="jean-square" src="./assets/images/Jean/jean_cake.jpg" alt="Tattoo of cake.">
-            <img class="jean-square" src="./assets/images/Jean/jean_candle.jpg" alt="Tattoo of a candle.">
-            <img class="jean-square" src="./assets/images/Jean/jean_cat.jpg" alt="Tattoo of a cat.">
-            <img class="jean-square" src="./assets/images/Jean/jean_duck.jpg" alt="Tattoo of a duck.">
-            <img class="jean-square" src="./assets/images/Jean/jean_fox.jpg" alt="Tattoo of a fox.">
-            <img class="jean-square" src="./assets/images/Jean/jean_ghost.jpg" alt="Tattoo of a ghost.">
-            <img class="jean-square" src="./assets/images/Jean/jean_hand.jpg" alt="Tattoo of a hand.">
-            <img class="jean-square" src="./assets/images/Jean/jean_house.jpg" alt="Tattoo of a house.">
-            <img class="jean-square" src="./assets/images/Jean/jean_medley.jpg" alt="multiple arm tattoos.">
-            <img class="jean-square" src="./assets/images/Jean/jean_mouse.jpg" alt="Tattoo of a mouse.">
-            <img class="jean-square" src="./assets/images/Jean/jean_snake.jpg" alt="Tattoo of a snake.">
-            <img class="jean-square" src="./assets/images/Jean/jean_sword.jpg" alt="Tattoo of a sword.">
-            <img class="jean-square" src="./assets/images/Jean/jean_tree.jpg" alt="Tattoo of a tree.">
-            <img class="jean-square" src="./assets/images/Jean/jean_vines.jpg" alt="Tattoo of some vines.">
-        </section>
-            </section>
+    <section class="portfolio-splash" id="tattoo-showcase">
+        <h2>&#x263C; Good Friend Tattoos!</h2>
+        <h3 class="artist-background">Tattoo's By Steph!</h3>
+        <p class="artist-insta">Steph's Instagram: <a href="https://www.instagram.com/cutebut.weird/" target="_blank">@cutebut.weird</a></p>
+        <div class="tattoo-gallery-wrapper">
+            <!-- Empty left column div -->
+            <div></div>
+            <div class="tattoo-gallery">
+                <figure>
+			<img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_alien.jpg" alt="Tattoo of an alien.">
+               </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph-fruits.jpg" alt="Tattoo of fruits.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_bowie.jpg" alt="Tattoo of david bowie.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_castle.jpg" alt="Tattoo of a castle.">    
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_chair.jpg" alt="Tattoo of a funky chair.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph-rocketship.jpg" alt="Tattoo of a rocket-ship.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_floathouse.jpg" alt="Tattoo of a floating house.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_fox.jpg" alt="Tattoo of a fox.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_juicebox.jpg" alt="Tattoo of a juicebox.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_lotus.jpg" alt="Tattoo of a lotus flower.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_paintbrush.jpg" alt="Tattoo of a paintbrush.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_skull.jpg" alt="Tattoo of a skull.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_sun.jpg" alt="Tattoo of a sun.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_vial.jpg" alt="Tattoo of a crystal vial.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_vines.jpg" alt="Tattoo of some vines.">
+                </figure>                
+            </div>
+            <!-- Empty right column div -->
+            <div></div>
+        </div>
         
-        <footer>
-            <p>Artist owned collective on Treaty 7 Territory</p>
-            <p>All body's welcome, 18+.</p>
-            <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
-        </footer>
+        <h3 class="artist-background">Tattoo's By Kyle!</h3>
+        <p class="artist-insta">Kyle's Instagram: <a href="https://www.instagram.com/its.tatty.time/" target="_blank">@its.tatty.time</a></p>
+        <div class="tattoo-gallery-wrapper">
+            <!-- Empty left column div -->
+            <div></div>
+            <div class="tattoo-gallery">
+                <figure>
+			<img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-building-flowers.jpg" alt="Tattoo of a building flowers.">
+               </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-building-scene.jpg" alt="Tattoo of a building scene.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-checkered-path.jpg" alt="Tattoo of checkered path.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-chill-smoker.jpg" alt="Tattoo of a chill smoker.">    
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-colour-tv.jpg" alt="Tattoo of a colour-tv.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-disco-ball.jpg" alt="Tattoo of a disco ball.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-flowerpot-corner-checkered-floor.jpg" alt="Tattoo of a flowerpot.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_fox.jpg" alt="Tattoo of a fox.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-grocery-cart.jpg" alt="Tattoo of a grocery cart.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-lil-pathway.jpg" alt="Tattoo of a lil pathway.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Steph/steph_paintbrush.jpg" alt="Tattoo of a paintbrush.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-silly-puppy-mountains.jpg" alt="Tattoo of a silly puppy.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-spooky-house.jpg" alt="Tattoo of a spooky house.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-stairwayRectangle.jpg" alt="Tattoo of a stairway.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-sweet-cow.jpg" alt="Tattoo of a sweet cow.">
+                </figure>         
+                <!-- <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-tattoo-socks-n-sandals.jpg" alt="Tattoo of a socks n sandals.">
+                </figure>  -->
+                <!-- <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-water-flowers.jpg" alt="Tattoo of water flowers.">
+                </figure>  -->                
+            </div>
+            <!-- Empty right column div -->
+            <div></div>
+        </div>
+                
+                <h3 class="artist-background">Tattoo's By Jean!</h3>
+                <p class="artist-insta">Jean's Instagram: <a href="https://www.instagram.com/conjeaniality/" target="_blank">@conjeaniality</a></p>
+        <div class="tattoo-gallery-wrapper">
+            <!-- Empty left column div -->
+            <div></div>
+            <div class="tattoo-gallery">
+                <figure>
+			<img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_barbwire.jpg" alt="Tattoo of barbwire.">
+               </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_cake.jpg" alt="Tattoo of cake.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_candle.jpg" alt="Tattoo of a candle.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_cat.jpg" alt="Tattoo of a cat.">    
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_duck.jpg" alt="Tattoo of a duck.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_fox.jpg" alt="Tattoo of a fox.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_ghost.jpg" alt="Tattoo of a ghost.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_hand.jpg" alt="Tattoo of a hand.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_house.jpg" alt="Tattoo of a house.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_medley.jpg" alt="multiple arm tattoos.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_mouse.jpg" alt="Tattoo of a mouse.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_snake.jpg" alt="Tattoo of a snake.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_sword.jpg" alt="Tattoo of a sword.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_tree.jpg" alt="Tattoo of a tree.">
+                </figure>
+                <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Jean/jean_vines.jpg" alt="Tattoo of some vines.">
+                </figure>         
+                <!-- <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-tattoo-socks-n-sandals.jpg" alt="Tattoo of a socks n sandals.">
+                </figure>  -->
+                <!-- <figure>
+                    <img class="artist-tattoo-portfolio" src="./assets/images/Kyle/kyle-water-flowers.jpg" alt="Tattoo of water flowers.">
+                </figure>  -->                
+            </div>
+            <!-- Empty right column div -->
+            <div></div>
+        </div>
+                
+    </section>
         
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+        
+    <footer>
+        <p>Artist owned collective on Treaty 7 Territory</p>
+        <p>All body's welcome, 18+.</p>
+        <p>&copy; Good Friend Tattoo<a href="admin">Admin</a></p>
+    </footer>
+        
+    <script src="./assets/scripts/scripts.js"></script>    
     </body>
 </html>
