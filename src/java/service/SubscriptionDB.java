@@ -40,7 +40,7 @@ public class SubscriptionDB {
         ResultSet rs = null;
 
         try {
-            ps = connection.prepareStatement("SELECT * FROM subscription;");
+            ps = connection.prepareStatement("SELECT * FROM subscription WHERE email = ?;");
             rs = ps.executeQuery();
             List<Subscription> subscription = new ArrayList<>();
             while (rs.next()) {

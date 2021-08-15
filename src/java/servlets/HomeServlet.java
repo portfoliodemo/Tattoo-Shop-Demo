@@ -44,15 +44,22 @@ public class HomeServlet extends HttpServlet {
         try {
             if (action.equals("unsubscribe")) {
                 ss.delete(email);
-                request.setAttribute("errorMessage", "Unsubscribe to us successfully");
+                request.setAttribute("errorMessage", "Unsubscribe to Good Friend successfully");
             } 
-            else if (action.equals("subscribe")) {
-                ss.insert(email);
-                request.setAttribute("errorMessage", "Subscribe to us successfully");
-            }
-        } catch (Exception ex) {
-            request.setAttribute("errorMessage", "not perform that action.");
         }
+        catch (Exception ex) {
+            request.setAttribute("errorMessage", "You are alredy ubsubscribe to Good Friend");
+        }
+        try{
+            if (action.equals("subscribe")) {
+                ss.insert(email);
+                request.setAttribute("errorMessage", "Subscribe to Good Friend successfully");
+            }
+        }
+             catch (Exception ex) {
+            request.setAttribute("errorMessage", "You are alredy subscribe to Good Friend");
+        }
+         
         
         ArrayList<Subscription> subscription = null;
         try {
@@ -60,8 +67,7 @@ public class HomeServlet extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(subscribe.class.getName()).log(Level.SEVERE, null, ex);
         }
-       // request.setAttribute("mail", subscription);
-        //request.setAttribute("errorMessage", "sucess");
+       
         getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
 }

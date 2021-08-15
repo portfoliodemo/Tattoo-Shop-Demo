@@ -31,38 +31,25 @@ function validateform(event) {
         alert("Please enter your mobile number");
          event.preventDefault();
         return false;
-    } else {
-        var regex = /^[1-9]\d{9}$/;
-        if (regex.test(mobile) === false) {
+    } 
+        var regex1 = /^[1-9]\d{9}$/;
+        if (regex1.test(mobile) === false) {
             alert("Please enter a valid 10 digit mobile number");
             event.preventDefault();
             return false;
-        } else {
-            alert("Please enter a valid 10 digit mobile number");
-           
-            location.reload();
-            return false;
-        }
-    }
+        } 
+    
     if (mail == "") {
        
         alert("Please enter your email address");
         event.preventDefault();
         return false;
-    } else {
-        // Regular expression for basic email validation
+    } 
+   
         var regex = /^\S+@\S+\.\S+$/;
-        if (regex.test(mail) === false) {
-            
+        if (regex.test(mail) === false) {         
             alert("Please enter a valid email address");
           event.preventDefault();
-           
-            return false;
-        } else {
-            alert("Please enter a valid email address");
-            event.preventDefault();    
             return false;
         }
-    }
-   
 }

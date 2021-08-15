@@ -35,14 +35,11 @@ function validateform() {
     if (mail == "") {
         alert("Please enter your email address");
         event.preventDefault();
-    } else {
-        // Regular expression for basic email validation
+    } 
+       
         var regex = /^\S+@\S+\.\S+$/;
         if (regex.test(mail) === false) {
             alert("Please enter a valid email address");
-        } else {
-            printError("emailErr", "");
-            emailErr = false;
-        }
+            event.preventDefault();
+        } 
     }
-} 
