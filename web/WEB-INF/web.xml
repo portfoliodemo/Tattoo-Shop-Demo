@@ -155,12 +155,12 @@
     <env-entry>
         <env-entry-name>webmail-username</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
-        <env-entry-value>viralpatel2697@gmail.com</env-entry-value>
+        <env-entry-value>Enter email</env-entry-value>
     </env-entry>
     <env-entry>
         <env-entry-name>webmail-password</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
-        <env-entry-value>SNAPchat@2020</env-entry-value>
+        <env-entry-value>Enter Password</env-entry-value>
     </env-entry>
     <servlet-mapping>
         <servlet-name>KyleServlet</servlet-name>
